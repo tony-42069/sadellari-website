@@ -292,8 +292,6 @@ const InnovationSection: React.FC = () => {
 };
 
 const EnhancedLanding: React.FC = () => {
-  const { scrollYProgress } = useScroll();
-  
   return (
     <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
       <ParticleField />
@@ -336,8 +334,8 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-24 relative z-10">
+{/* About Section */}
+<section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -412,8 +410,8 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 relative z-10">
+   {/* Contact Section */}
+   <section id="contact" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.h2
             className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
