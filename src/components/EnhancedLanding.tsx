@@ -202,7 +202,7 @@ const HeroSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="space-y-8">
+        <div className="space-y-6">
           <motion.h1 
             className="text-7xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
             whileHover={{ scale: 1.02 }}
@@ -211,35 +211,24 @@ const HeroSection: React.FC = () => {
             SADELLARI
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl text-blue-200/90 font-light tracking-wide relative inline-block"
+            className="text-lg md:text-xl text-blue-200/90 font-light tracking-wide relative inline-block"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <span className="relative">
               <span className="absolute inset-0 blur-sm bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 rounded-lg"></span>
-              <span className="relative glass px-4 py-1 rounded-lg">ENTERPRISES</span>
+              <span className="relative glass px-3 py-1 rounded-lg">ENTERPRISES</span>
             </span>
           </motion.p>
 
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-xl md:text-2xl text-blue-200 font-light">
-              Building Tomorrow's Enterprises Through Strategic Innovation
+          <div className="max-w-3xl mx-auto space-y-8">
+            <p className="text-xl md:text-2xl text-blue-200 font-light leading-relaxed">
+              Building Tomorrow's Enterprises Through Strategic AI/ML Innovation
             </p>
-            
-            <motion.div 
-              className="glass rounded-xl p-6 max-w-2xl mx-auto backdrop-blur-xl"
-              whileHover={{ scale: 1.02 }}
-            >
-              <p className="text-lg text-blue-200/90 leading-relaxed">
-                Building the next generation of solutions in artificial intelligence, 
-                commercial real estate, and enterprise productivity. Our technology stack 
-                combines cutting-edge AI with strategic business insights.
-              </p>
-            </motion.div>
 
             <motion.a
               href="#portfolio"
-              className="inline-block px-12 py-4 mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-lg text-white font-semibold text-lg shadow-lg shadow-blue-500/20 border border-blue-400/20 backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 button-shine shimmer"
+              className="inline-block px-12 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-lg text-white font-semibold text-lg shadow-lg shadow-blue-500/20 border border-blue-400/20 backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 button-shine shimmer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -264,24 +253,30 @@ const InnovationSection: React.FC = () => {
         >
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue-200 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient">
-              Innovation Lab
+              The Innovation Lab
             </h2>
             <p className="text-blue-100/80 text-lg leading-relaxed">
-              Our Innovation Lab serves as an incubator for transformative ideas,
-              where cutting-edge technology meets strategic execution. Through a
-              carefully crafted process, we develop and refine solutions that
-              address complex challenges in today's evolving business landscape.
+              Our AI/ML Innovation Lab serves as a cutting-edge incubator where advanced 
+              artificial intelligence and machine learning technologies converge with strategic execution. 
+              Through our systematic approach, we develop intelligent solutions that transform 
+              complex business challenges into opportunities for innovation.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
-            {['Research', 'Development', 'Testing', 'Launch'].map((phase, index) => (
+            {[
+              { phase: 'AI Research', desc: 'Deep Learning & Neural Networks' },
+              { phase: 'ML Development', desc: 'Predictive Analytics & Automation' },
+              { phase: 'Testing', desc: 'Performance & Accuracy Validation' },
+              { phase: 'Launch', desc: 'Deployment & Optimization' }
+            ].map((item, index) => (
               <motion.div
-                key={phase}
+                key={item.phase}
                 className="glass p-6 hover:bg-blue-500/5"
                 whileHover={{ scale: 1.05, rotateY: index % 2 === 0 ? 5 : -5 }}
               >
                 <div className="text-3xl text-blue-400 mb-2 font-bold">0{index + 1}</div>
-                <div className="text-blue-200">{phase}</div>
+                <div className="text-blue-200 font-semibold mb-2">{item.phase}</div>
+                <div className="text-blue-200/70 text-sm">{item.desc}</div>
               </motion.div>
             ))}
           </div>
