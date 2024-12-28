@@ -208,13 +208,21 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="space-y-6">
-          <motion.h1 
-            className="text-7xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            SADELLARI
-          </motion.h1>
+        <motion.h1 
+  className="text-7xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow flex items-center justify-center w-full"
+  whileHover={{ scale: 1.02 }}
+  transition={{ type: "spring", stiffness: 300 }}
+>
+  <Image 
+    src="/s-logo-transparent.png"
+    alt="S Logo"
+    width={160}
+    height={160}
+    className="h-[1.4em] w-auto object-contain mr-[-0.15em]"
+    priority
+  />
+  ADELLARI
+</motion.h1>
           <motion.p 
             className="text-lg md:text-xl text-blue-200/90 font-light tracking-wide relative inline-block"
             whileHover={{ scale: 1.05 }}
