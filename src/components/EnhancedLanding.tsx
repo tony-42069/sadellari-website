@@ -191,6 +191,106 @@ const ContactForm: React.FC = () => {
   );
 };
 
+const HeroSection: React.FC = () => {
+  return (
+    <section id="home" className="min-h-screen flex items-center relative z-10">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 animate-gradient" />
+      
+      <motion.div
+        className="container mx-auto px-4 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="space-y-8">
+          <motion.h1 
+            className="text-7xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            SADELLARI
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-blue-200/90 font-light tracking-wide relative inline-block"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <span className="relative">
+              <span className="absolute inset-0 blur-sm bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 rounded-lg"></span>
+              <span className="relative glass px-4 py-1 rounded-lg">ENTERPRISES</span>
+            </span>
+          </motion.p>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            <p className="text-xl md:text-2xl text-blue-200 font-light">
+              Building Tomorrow's Enterprises Through Strategic Innovation
+            </p>
+            
+            <motion.div 
+              className="glass rounded-xl p-6 max-w-2xl mx-auto backdrop-blur-xl"
+              whileHover={{ scale: 1.02 }}
+            >
+              <p className="text-lg text-blue-200/90 leading-relaxed">
+                Building the next generation of solutions in artificial intelligence, 
+                commercial real estate, and enterprise productivity. Our technology stack 
+                combines cutting-edge AI with strategic business insights.
+              </p>
+            </motion.div>
+
+            <motion.a
+              href="#portfolio"
+              className="inline-block px-12 py-4 mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-lg text-white font-semibold text-lg shadow-lg shadow-blue-500/20 border border-blue-400/20 backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 button-shine shimmer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Join the Waitlist
+            </motion.a>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+const InnovationSection: React.FC = () => {
+  return (
+    <section className="py-24 relative z-10">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
+        >
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-200 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient">
+              Innovation Lab
+            </h2>
+            <p className="text-blue-100/80 text-lg leading-relaxed">
+              Our Innovation Lab serves as an incubator for transformative ideas,
+              where cutting-edge technology meets strategic execution. Through a
+              carefully crafted process, we develop and refine solutions that
+              address complex challenges in today's evolving business landscape.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            {['Research', 'Development', 'Testing', 'Launch'].map((phase, index) => (
+              <motion.div
+                key={phase}
+                className="glass p-6 hover:bg-blue-500/5"
+                whileHover={{ scale: 1.05, rotateY: index % 2 === 0 ? 5 : -5 }}
+              >
+                <div className="text-3xl text-blue-400 mb-2 font-bold">0{index + 1}</div>
+                <div className="text-blue-200">{phase}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 const EnhancedLanding: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
@@ -199,141 +299,14 @@ const EnhancedLanding: React.FC = () => {
     <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
       <ParticleField />
       <Navigation />
+      <HeroSection />
+      <InnovationSection />
       
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center relative z-10">
-        <motion.div
-          className="container mx-auto px-4 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className="mb-8 relative w-40 h-40 mx-auto"
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <img 
-              src="/holdco-logo.png.jpg" 
-              alt="Sadellari Enterprises Logo" 
-              className="w-full h-full object-contain"
-            />
-          </motion.div>
-          
-          <div className="space-y-4">
-            <h1 className="text-7xl md:text-8xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient">
-              SADELLARI
-            </h1>
-            <p className="text-2xl md:text-3xl text-blue-200/80 font-light tracking-wide mb-8">
-              ENTERPRISES
-            </p>
-            <p className="text-xl md:text-2xl text-blue-200 mb-12 max-w-3xl mx-auto">
-              Transforming Industries Through Innovation and Strategic Vision
-            </p>
-            <motion.a
-              href="#contact"
-              className="inline-block px-10 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-lg text-white font-semibold text-lg shadow-lg shadow-blue-500/20 border border-blue-400/20 backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Join the Waitlist
-            </motion.a>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient">
-              About Us
-            </h2>
-            
-            <div className="space-y-12">
-              {/* Welcome Section */}
-              <div className="glass rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-blue-300 mb-4">Welcome to Sadellari Enterprises</h3>
-                <p className="text-lg text-blue-200/90 leading-relaxed">
-                  Sadellari Enterprises is the culmination of years of experience in banking, entrepreneurship, and a relentless passion for innovation. 
-                  Founded by Dorian Sadellari, the company embodies a forward-thinking vision to create transformative businesses in technology, 
-                  commercial real estate, and beyond.
-                </p>
-              </div>
-
-              {/* Mission Section */}
-              <div className="glass rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-blue-300 mb-4">Our Mission</h3>
-                <p className="text-lg text-blue-200/90 leading-relaxed">
-                  At Sadellari Enterprises, our mission is clear: to blend expertise, creativity, and innovation into ventures that challenge convention 
-                  and deliver enduring value. By leveraging decades of insights and a knack for seeing opportunities where others see roadblocks, 
-                  we aim to lead industries into the future.
-                </p>
-              </div>
-
-              {/* Approach Grid */}
-              <div className="grid md:grid-cols-3 gap-8">
-                <motion.div 
-                  className="glass rounded-xl p-6"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Experience-Driven Leadership</h4>
-                  <p className="text-blue-200/90">
-                    With a solid foundation in banking and commercial real estate, we excel in turning complexity into clarity. 
-                    Our strategic vision is shaped by years of navigating high-stakes industries.
-                  </p>
-                </motion.div>
-
-                <motion.div 
-                  className="glass rounded-xl p-6"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Innovation at the Heart</h4>
-                  <p className="text-blue-200/90">
-                    Through the Sadellari Innovation Lab, we're not just reacting to change—we're driving it. From developing cutting-edge AI 
-                    applications to redefining real estate strategies.
-                  </p>
-                </motion.div>
-
-                <motion.div 
-                  className="glass rounded-xl p-6"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Precision Meets Purpose</h4>
-                  <p className="text-blue-200/90">
-                    Every initiative we undertake is aligned with a commitment to excellence. Our work is underpinned by a relentless pursuit of results.
-                  </p>
-                </motion.div>
-              </div>
-
-              {/* Founder's Note */}
-              <motion.div 
-                className="glass rounded-xl p-8 border border-blue-400/20"
-                whileHover={{ scale: 1.01 }}
-              >
-                <h3 className="text-2xl font-semibold text-blue-300 mb-4">A Note from Our Founder</h3>
-                <blockquote className="text-lg text-blue-200/90 leading-relaxed italic">
-                  "Sadellari Enterprises is more than a company—it's a reflection of my life's work and aspirations. It's about leveraging everything 
-                  I've learned in finance and entrepreneurship to create solutions that matter. With the Innovation Lab at our core, we're turning 
-                  bold ideas into tangible results that shape industries and leave a lasting legacy."
-                </blockquote>
-                <p className="text-right mt-4 text-blue-300 font-semibold">— Dorian Sadellari, Founder</p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -343,24 +316,103 @@ const EnhancedLanding: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <BrandCard
-              logo="/dorianai-logo.png.jpg"
+              logo="/abare-logo.png.jpg"
               title="Brand 1 – Coming Soon"
-              description="This brand is under development. Stay tuned for exciting innovations in the real estate space."
+              description="Reimagining commercial real estate analysis through advanced technology"
               delay={0.2}
             />
             <BrandCard
               logo="/aistaff-logo.png.jpg"
               title="Brand 2 – Coming Soon"
-              description="Our next venture into AI-powered solutions is on the horizon. More details coming soon."
+              description="Enhancing enterprise productivity through intelligent automation"
               delay={0.4}
             />
             <BrandCard
-              logo="/holdco-logo.png.jpg"
+              logo="/dorianai-logo.png.jpg"
               title="Brand 3 – Coming Soon"
-              description="A revolutionary approach to technology integration. Watch this space for updates."
+              description="Delivering strategic AI solutions for complex business challenges"
               delay={0.6}
             />
           </div>
+        </div>
+      </section>
+
+      {/* About Section - Condensed */}
+      <section id="about" className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow">
+              About Us
+            </h2>
+            
+            <div className="space-y-8">
+              {/* Welcome & Mission Combined */}
+              <motion.div 
+                className="glass rounded-xl p-8 border border-blue-400/20"
+                whileHover={{ scale: 1.02 }}
+              >
+                <h3 className="text-2xl font-semibold text-blue-300 mb-4">Welcome to Sadellari Enterprises</h3>
+                <p className="text-lg text-blue-200/90 leading-relaxed mb-6">
+                  Founded by Dorian Sadellari, we are the culmination of years of experience in banking, 
+                  entrepreneurship, and innovation. Our mission is to blend expertise, creativity, and 
+                  cutting-edge technology to challenge convention and deliver enduring value.
+                </p>
+              </motion.div>
+
+              {/* Approach Grid */}
+              <div className="grid md:grid-cols-3 gap-6">
+                <motion.div 
+                  className="glass rounded-xl p-6 hover:bg-blue-500/5"
+                  whileHover={{ scale: 1.05, rotateY: 5 }}
+                >
+                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Experience-Driven</h4>
+                  <p className="text-blue-200/90">
+                    Turning complexity into clarity through years of industry expertise.
+                  </p>
+                </motion.div>
+
+                <motion.div 
+                  className="glass rounded-xl p-6 hover:bg-purple-500/5"
+                  whileHover={{ scale: 1.05, rotateY: -5 }}
+                >
+                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Innovation Lab</h4>
+                  <p className="text-blue-200/90">
+                    Driving change through cutting-edge AI and real estate solutions.
+                  </p>
+                </motion.div>
+
+                <motion.div 
+                  className="glass rounded-xl p-6 hover:bg-blue-500/5"
+                  whileHover={{ scale: 1.05, rotateY: 5 }}
+                >
+                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Results-Driven</h4>
+                  <p className="text-blue-200/90">
+                    Committed to excellence and delivering measurable outcomes.
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* Founder's Note */}
+              <motion.div 
+                className="glass rounded-xl p-8 border border-blue-400/20 relative overflow-hidden"
+                whileHover={{ scale: 1.01 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 animate-gradient"></div>
+                <div className="relative">
+                  <blockquote className="text-lg text-blue-200/90 leading-relaxed italic">
+                    "Sadellari Enterprises is more than a company—it's a reflection of my life's work and aspirations. 
+                    With the Innovation Lab at our core, we're turning bold ideas into tangible results that shape industries."
+                  </blockquote>
+                  <p className="text-right mt-4 text-blue-300 font-semibold">— Dorian Sadellari, Founder</p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
