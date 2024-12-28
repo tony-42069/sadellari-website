@@ -209,7 +209,7 @@ const HeroSection: React.FC = () => {
       >
         <div className="space-y-6">
         <motion.h1 
-  className="text-7xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow flex items-center justify-center w-full"
+  className="text-7xl md:text-8xl font-bold flex items-center justify-center w-full"
   whileHover={{ scale: 1.02 }}
   transition={{ type: "spring", stiffness: 300 }}
 >
@@ -221,7 +221,9 @@ const HeroSection: React.FC = () => {
     className="h-[1.4em] w-auto object-contain mr-[-0.15em]"
     priority
   />
-  ADELLARI
+  <span className="styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all">
+    ADELLARI
+  </span>
 </motion.h1>
           <motion.p 
             className="text-lg md:text-xl text-blue-200/90 font-light tracking-wide relative inline-block"
