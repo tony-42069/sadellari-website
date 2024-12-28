@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Next.js](https://img.shields.io/badge/Next.js-15.1.2-black)
+![React](https://img.shields.io/badge/React-19.0.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![License](https://img.shields.io/badge/License-Proprietary-red)
+![Status](https://img.shields.io/badge/Status-Pre--Launch-yellow)
 
-## Getting Started
+# Sadellari Enterprises Website
 
-First, run the development server:
+A modern, interactive web platform showcasing Sadellari Enterprises' AI/ML innovation portfolio and services. Built with Next.js, React, and TypeScript, featuring fluid animations and responsive design.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚧 Pre-Launch Notice
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is currently in pre-launch phase. Features and content are being actively developed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 15.1.2
+- React 19.0.0
+- TypeScript 5
+- Framer Motion
+- Tailwind CSS
 
-## Learn More
+## 🔒 License
 
-To learn more about Next.js, take a look at the following resources:
+Proprietary and Confidential
+Copyright (c) 2024 Sadellari Enterprises. All Rights Reserved.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This software and its documentation are protected by copyright law and international treaties. Unauthorized reproduction or distribution of this software, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under law.
