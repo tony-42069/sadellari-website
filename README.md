@@ -9,7 +9,7 @@
 
 Welcome to the Sadellari Enterprises website repository. This is the official codebase for [sadellari.com](https://sadellari.com), our enterprise innovation lab focused on AI/ML solutions and strategic technology implementation.
 
-![Sadellari Enterprises Homepage Preview](./public/preview.png)
+![Sadellari Enterprises Homepage Preview](/public/preview.png)
 
 ## About Sadellari Enterprises
 
@@ -138,5 +138,3 @@ This is a private repository for Sadellari Enterprises. External contributions a
 
 © 2024 Sadellari Enterprises. All rights reserved. This code is proprietary and confidential.
 
----
-Built with ♥️ by S
