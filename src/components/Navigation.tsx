@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import Image from 'next/image';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,13 +32,14 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <motion.div
-            className="h-12 w-12"
+            className="relative h-12 w-12"
             whileHover={{ scale: 1.05 }}
           >
-            <img 
+            <Image 
               src="/holdco-logo.png.jpg" 
               alt="Sadellari Enterprises" 
-              className="h-full w-full object-contain"
+              fill
+              className="object-contain"
             />
           </motion.div>
           
@@ -50,7 +51,7 @@ const Navigation: React.FC = () => {
                 className="text-blue-200 hover:text-blue-400 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
                     behavior: 'smooth'

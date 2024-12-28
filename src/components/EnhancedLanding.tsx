@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
 import Navigation from './Navigation';
-import { placeholderImages } from '@/lib/generatePlaceholder';
+import Image from 'next/image';
 
 interface Particle {
   x: number;
@@ -141,10 +141,15 @@ const BrandCard: React.FC<BrandCardProps> = ({ logo, title, description, delay =
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl blur-xl transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
       <div className="relative p-6 backdrop-blur-lg bg-white/5 rounded-xl border border-white/10 overflow-hidden">
         <motion.div
-          className="w-24 h-24 mx-auto mb-4"
+          className="relative w-24 h-24 mx-auto mb-4"
           animate={isHovered ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
         >
-          <img src={logo} alt={title} className="w-full h-full object-contain" />
+          <Image 
+            src={logo} 
+            alt={title} 
+            fill
+            className="object-contain" 
+          />
         </motion.div>
         <h3 className="text-xl font-semibold text-blue-300 mb-2">{title}</h3>
         <p className="text-blue-100/80">{description}</p>
@@ -223,7 +228,7 @@ const HeroSection: React.FC = () => {
 
           <div className="max-w-3xl mx-auto space-y-8">
             <p className="text-xl md:text-2xl text-blue-200 font-light leading-relaxed">
-              Building Tomorrow's Enterprises Through Strategic AI/ML Innovation
+              Building Tomorrow&apos;s Enterprises Through Strategic AI/ML Innovation
             </p>
 
             <motion.a
@@ -288,8 +293,7 @@ const InnovationSection: React.FC = () => {
 
 const EnhancedLanding: React.FC = () => {
   const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-
+  
   return (
     <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
       <ParticleField />
@@ -312,19 +316,19 @@ const EnhancedLanding: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <BrandCard
               logo="/abare-logo.png.jpg"
-              title="Brand 1 – Coming Soon"
+              title="Brand 1 &ndash; Coming Soon"
               description="Reimagining commercial real estate analysis through advanced technology"
               delay={0.2}
             />
             <BrandCard
               logo="/aistaff-logo.png.jpg"
-              title="Brand 2 – Coming Soon"
+              title="Brand 2 &ndash; Coming Soon"
               description="Enhancing enterprise productivity through intelligent automation"
               delay={0.4}
             />
             <BrandCard
               logo="/dorianai-logo.png.jpg"
-              title="Brand 3 – Coming Soon"
+              title="Brand 3 &ndash; Coming Soon"
               description="Delivering strategic AI solutions for complex business challenges"
               delay={0.6}
             />
@@ -332,7 +336,7 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-      {/* About Section - Condensed */}
+      {/* About Section */}
       <section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
@@ -346,7 +350,6 @@ const EnhancedLanding: React.FC = () => {
             </h2>
             
             <div className="space-y-8">
-              {/* Welcome & Mission Combined */}
               <motion.div 
                 className="glass rounded-xl p-8 border border-blue-400/20"
                 whileHover={{ scale: 1.02 }}
@@ -359,7 +362,6 @@ const EnhancedLanding: React.FC = () => {
                 </p>
               </motion.div>
 
-              {/* Approach Grid */}
               <div className="grid md:grid-cols-3 gap-6">
                 <motion.div 
                   className="glass rounded-xl p-6 hover:bg-blue-500/5"
@@ -392,7 +394,6 @@ const EnhancedLanding: React.FC = () => {
                 </motion.div>
               </div>
 
-              {/* Founder's Note */}
               <motion.div 
                 className="glass rounded-xl p-8 border border-blue-400/20 relative overflow-hidden"
                 whileHover={{ scale: 1.01 }}
@@ -400,10 +401,10 @@ const EnhancedLanding: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 animate-gradient"></div>
                 <div className="relative">
                   <blockquote className="text-lg text-blue-200/90 leading-relaxed italic">
-                    "Sadellari Enterprises is more than a company—it's a reflection of my life's work and aspirations. 
-                    With the Innovation Lab at our core, we're turning bold ideas into tangible results that shape industries."
+                    &ldquo;Sadellari Enterprises is more than a company&mdash;it&apos;s a reflection of my life&apos;s work and aspirations. 
+                    With the Innovation Lab at our core, we&apos;re turning bold ideas into tangible results that shape industries.&rdquo;
                   </blockquote>
-                  <p className="text-right mt-4 text-blue-300 font-semibold">— Dorian Sadellari, Founder</p>
+                  <p className="text-right mt-4 text-blue-300 font-semibold">&mdash; Dorian Sadellari, Founder</p>
                 </div>
               </motion.div>
             </div>
