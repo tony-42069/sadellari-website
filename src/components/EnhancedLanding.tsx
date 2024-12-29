@@ -221,8 +221,18 @@ const HeroSection: React.FC = () => {
     className="h-[1.4em] w-auto object-contain mr-[-0.15em]"
     priority
   />
+
+<Image 
+      src="/a-logo-1.png"
+      alt="A"
+      width={160}
+      height={160}
+      className="h-[1.4em] w-auto object-contain"
+      priority
+    />
+
   <span className="styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all">
-    ADELLARI
+    DELLARI
   </span>
 </motion.h1>
           <motion.p 
