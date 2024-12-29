@@ -198,28 +198,28 @@ const ContactForm: React.FC = () => {
 
 const HeroSection: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center relative z-10">
+    <section id="home" className="min-h-screen flex items-center justify-center relative z-10 w-full overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 animate-gradient" />
       
       <motion.div
-        className="container mx-auto px-4 text-center"
+        className="w-full text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="space-y-6">
+        <div className="space-y-6 w-full">
           <motion.h1 
-            className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold w-full scale-90 sm:scale-100"
+            className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-bold w-full"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="flex flex-row flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4">
+            <div className="flex flex-row flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all w-full">
               <Image 
                 src="/s-logo-transparent.png"
                 alt="S Logo"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mr-[-0.15em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mr-[-0.15em]"
                 priority
               />
               <Image 
@@ -227,7 +227,7 @@ const HeroSection: React.FC = () => {
                 alt="A"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
               <Image 
@@ -235,7 +235,7 @@ const HeroSection: React.FC = () => {
                 alt="D"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
               <Image 
@@ -243,7 +243,7 @@ const HeroSection: React.FC = () => {
                 alt="E"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
               <Image 
@@ -251,7 +251,7 @@ const HeroSection: React.FC = () => {
                 alt="L"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
               <Image 
@@ -259,7 +259,7 @@ const HeroSection: React.FC = () => {
                 alt="L"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
               <Image 
@@ -267,7 +267,7 @@ const HeroSection: React.FC = () => {
                 alt="A"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
               <Image 
@@ -275,7 +275,7 @@ const HeroSection: React.FC = () => {
                 alt="R"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
               <Image 
@@ -283,7 +283,7 @@ const HeroSection: React.FC = () => {
                 alt="I"
                 width={160}
                 height={160}
-                className="h-[1.2em] xs:h-[1.3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
                 priority
               />
             </div>
