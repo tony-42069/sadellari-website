@@ -17,7 +17,7 @@ const ParticleField: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const particlesRef = useRef<Particle[]>([]);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const animationFrameRef = useRef<number>(0); // Initialize with 0
+  const animationFrameRef = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -50,7 +50,6 @@ const ParticleField: React.FC = () => {
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
-        // Mouse interaction
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -60,19 +59,16 @@ const ParticleField: React.FC = () => {
           particle.y -= dy * 0.03;
         }
 
-        // Wrap around screen
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 
-        // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(99, 179, 237, 0.3)';
         ctx.fill();
 
-        // Connect particles
         for (let j = i + 1; j < particlesRef.current.length; j++) {
           const otherParticle = particlesRef.current[j];
           const dx = otherParticle.x - particle.x;
@@ -198,96 +194,94 @@ const ContactForm: React.FC = () => {
 
 const HeroSection: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center relative z-10">
+    <section id="home" className="min-h-screen flex items-center justify-center relative z-10 w-full overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 animate-gradient" />
       
       <motion.div
-        className="container mx-auto px-4 text-center"
+        className="w-full text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="space-y-6">
+        <div className="space-y-6 w-full">
           <motion.h1 
-            className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold w-full scale-90 sm:scale-100"
+            className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-bold w-full"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="flex flex-row flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all w-full overflow-x-auto px-2">
-              <div className="flex items-center justify-center min-w-max">
-                <Image 
-                  src="/s-logo-transparent.png"
-                  alt="S Logo"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mr-[-0.1em]"
-                  priority
-                />
-                <Image 
-                  src="/a-logo-1.png"
-                  alt="A"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-                <Image 
-                  src="/d-logo.png"
-                  alt="D"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-                <Image 
-                  src="/e-logo.png"
-                  alt="E"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-                <Image 
-                  src="/l-logo-1.png"
-                  alt="L"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-                <Image 
-                  src="/l-logo-2.png"
-                  alt="L"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-                <Image 
-                  src="/a-logo-2.png"
-                  alt="A"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-                <Image 
-                  src="/r-logo.png"
-                  alt="R"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-                <Image 
-                  src="/i-logo.png"
-                  alt="I"
-                  width={160}
-                  height={160}
-                  className="h-[1em] xs:h-[1.1em] sm:h-[1.2em] md:h-[1.3em] lg:h-[1.4em] w-auto object-contain mx-[-0.15em]"
-                  priority
-                />
-              </div>
+            <div className="flex flex-row flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all w-full">
+              <Image 
+                src="/s-logo-transparent.png"
+                alt="S Logo"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mr-[-0.15em]"
+                priority
+              />
+              <Image 
+                src="/a-logo-1.png"
+                alt="A"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
+              <Image 
+                src="/d-logo.png"
+                alt="D"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
+              <Image 
+                src="/e-logo.png"
+                alt="E"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
+              <Image 
+                src="/l-logo-1.png"
+                alt="L"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
+              <Image 
+                src="/l-logo-2.png"
+                alt="L"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
+              <Image 
+                src="/a-logo-2.png"
+                alt="A"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
+              <Image 
+                src="/r-logo.png"
+                alt="R"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
+              <Image 
+                src="/i-logo.png"
+                alt="I"
+                width={160}
+                height={160}
+                className="h-[3em] sm:h-[1.4em] w-auto object-contain mx-[-0.2em]"
+                priority
+              />
             </div>
           </motion.h1>
 
@@ -304,7 +298,7 @@ const HeroSection: React.FC = () => {
 
           <div className="max-w-3xl mx-auto space-y-8">
             <p className="text-xl md:text-2xl text-blue-200 font-light leading-relaxed">
-              Building Tomorrow&apos;s Enterprises Through Strategic AI/ML Innovation
+              Building Tomorrow's Enterprises Through Strategic AI/ML Innovation
             </p>
 
             <motion.a
@@ -375,7 +369,6 @@ const EnhancedLanding: React.FC = () => {
       <HeroSection />
       <InnovationSection />
       
-      {/* Portfolio Section */}
       <section id="portfolio" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -410,8 +403,7 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-{/* About Section */}
-<section id="about" className="py-24 relative z-10">
+      <section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -475,8 +467,8 @@ const EnhancedLanding: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 animate-gradient"></div>
                 <div className="relative">
                   <blockquote className="text-lg text-blue-200/90 leading-relaxed italic">
-                    &ldquo;Sadellari Enterprises is more than a company&mdash;it&apos;s a reflection of my life&apos;s work and aspirations. 
-                    With the Innovation Lab at our core, we&apos;re turning bold ideas into tangible results that shape industries.&rdquo;
+                    &ldquo;Sadellari Enterprises is more than a company&mdash;it's a reflection of my life's work and aspirations. 
+                    With the Innovation Lab at our core, we're turning bold ideas into tangible results that shape industries.&rdquo;
                   </blockquote>
                   <p className="text-right mt-4 text-blue-300 font-semibold">&mdash; Dorian Sadellari, Founder</p>
                 </div>
@@ -486,8 +478,7 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-   {/* Contact Section */}
-   <section id="contact" className="py-24 relative z-10">
+      <section id="contact" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.h2
             className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
