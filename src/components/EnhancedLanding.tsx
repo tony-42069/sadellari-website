@@ -112,11 +112,12 @@ const ParticleField: React.FC = () => {
 interface BrandCardProps {
   logo: string;
   title: string;
+  actualBrandName: string;
   description: string;
   delay?: number;
 }
 
-const BrandCard: React.FC<BrandCardProps> = ({ logo, title, description, delay = 0 }) => {
+const BrandCard: React.FC<BrandCardProps> = ({ logo, title, actualBrandName, description, delay = 0 }) => {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -147,7 +148,14 @@ const BrandCard: React.FC<BrandCardProps> = ({ logo, title, description, delay =
             className="object-contain" 
           />
         </motion.div>
-        <h3 className="text-xl font-semibold text-blue-300 mb-2">{title}</h3>
+        <div className="relative">
+          <h3 className="text-xl font-semibold text-blue-300 mb-2 blur-sm select-none">
+            {actualBrandName}
+          </h3>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-blue-300 font-semibold">Coming Soon</span>
+          </div>
+        </div>
         <p className="text-blue-100/80">{description}</p>
       </div>
     </motion.div>
@@ -320,19 +328,22 @@ const EnhancedLanding: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <BrandCard
               logo="/abare-logo.png.jpg"
-              title="Brand 1 &ndash; Coming Soon"
+              title="Coming Soon"
+              actualBrandName="ABARE"
               description="Reimagining commercial real estate analysis through advanced technology"
               delay={0.2}
             />
             <BrandCard
               logo="/aistaff-logo.png.jpg"
-              title="Brand 2 &ndash; Coming Soon"
+              title="Coming Soon"
+              actualBrandName="AiStaff"
               description="Enhancing enterprise productivity through intelligent automation"
               delay={0.4}
             />
             <BrandCard
               logo="/dorianai-logo.png.jpg"
-              title="Brand 3 &ndash; Coming Soon"
+              title="Coming Soon"
+              actualBrandName="DorianAI"
               description="Delivering strategic AI solutions for complex business challenges"
               delay={0.6}
             />
@@ -343,7 +354,7 @@ const EnhancedLanding: React.FC = () => {
       <section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
-            className="max-w-4xl mx-auto"
+            className="max-w-6xl mx-auto"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -352,64 +363,76 @@ const EnhancedLanding: React.FC = () => {
               About Us
             </h2>
             
-            <div className="space-y-8">
-              <motion.div 
-                className="glass rounded-xl p-8 border border-blue-400/20"
-                whileHover={{ scale: 1.02 }}
-              >
-                <h3 className="text-2xl font-semibold text-blue-300 mb-4">Welcome to Sadellari Enterprises</h3>
-                <p className="text-lg text-blue-200/90 leading-relaxed mb-6">
-                  Founded by Dorian Sadellari, we are the culmination of years of experience in banking, 
-                  entrepreneurship, and innovation. Our mission is to blend expertise, creativity, and 
-                  cutting-edge technology to challenge convention and deliver enduring value.
-                </p>
-              </motion.div>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                <motion.div 
-                  className="glass rounded-xl p-6 hover:bg-blue-500/5"
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                >
-                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Experience-Driven</h4>
-                  <p className="text-blue-200/90">
-                    Turning complexity into clarity through years of industry expertise.
-                  </p>
-                </motion.div>
-
-                <motion.div 
-                  className="glass rounded-xl p-6 hover:bg-purple-500/5"
-                  whileHover={{ scale: 1.05, rotateY: -5 }}
-                >
-                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Innovation Lab</h4>
-                  <p className="text-blue-200/90">
-                    Driving change through cutting-edge AI and real estate solutions.
-                  </p>
-                </motion.div>
-
-                <motion.div 
-                  className="glass rounded-xl p-6 hover:bg-blue-500/5"
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                >
-                  <h4 className="text-xl font-semibold text-blue-300 mb-3">Results-Driven</h4>
-                  <p className="text-blue-200/90">
-                    Committed to excellence and delivering measurable outcomes.
-                  </p>
-                </motion.div>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+                  <Image
+                    src="/dorian-photo.jpg"
+                    alt="Dorian Sadellari"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="glass p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-400">12+</div>
+                    <div className="text-sm text-blue-200/70">Active Projects</div>
+                  </div>
+                  <div className="glass p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-400">5+</div>
+                    <div className="text-sm text-blue-200/70">AI Integrations</div>
+                  </div>
+                  <div className="glass p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-400">6+</div>
+                    <div className="text-sm text-blue-200/70">CRE Tools</div>
+                  </div>
+                  <div className="glass p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-400">1-3</div>
+                    <div className="text-sm text-blue-200/70">Days Ship Velocity</div>
+                  </div>
+                </div>
               </div>
 
-              <motion.div 
-                className="glass rounded-xl p-8 border border-blue-400/20 relative overflow-hidden"
-                whileHover={{ scale: 1.01 }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 animate-gradient"></div>
-                <div className="relative">
-                  <blockquote className="text-lg text-blue-200/90 leading-relaxed italic">
-                  &ldquo;Sadellari Enterprises is more than a company&mdash;it's a reflection of my life's work and aspirations. 
-                  With the Innovation Lab at our core, we're turning bold ideas into tangible results that shape industries.&rdquo;
-                  </blockquote>
-                  <p className="text-right mt-4 text-blue-300 font-semibold">&mdash; Dorian Sadellari, Founder</p>
+              <div className="space-y-8">
+                <div className="glass p-8">
+                  <h3 className="text-2xl font-bold text-blue-300 mb-4">Vision & Leadership</h3>
+                  <p className="text-blue-200/90 leading-relaxed mb-6">
+                    With over a decade of experience in commercial banking at institutions like Bank of America 
+                    and Huntington National Bank, I've developed a deep understanding of financial markets 
+                    and business operations. Now, I'm leveraging that expertise to pioneer the world's first 
+                    fully AI-driven and DAO-operated holding company.
+                  </p>
+                  <p className="text-blue-200/90 leading-relaxed">
+                    Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
+                    <span className="relative">
+                      <span className="blur-sm select-none">ABARE</span>
+                      <span className="absolute inset-0 flex items-center justify-center">Coming Soon</span>
+                    </span> for commercial real estate analysis,{' '}
+                    <span className="relative">
+                      <span className="blur-sm select-none">AiStaff</span>
+                      <span className="absolute inset-0 flex items-center justify-center">Coming Soon</span>
+                    </span> for AI agent deployment, and{' '}
+                    <span className="relative">
+                      <span className="blur-sm select-none">DorianAI</span>
+                      <span className="absolute inset-0 flex items-center justify-center">Coming Soon</span>
+                    </span> for strategic consulting. Each brand represents a convergence of traditional 
+                    business acumen with cutting-edge AI technology.
+                  </p>
                 </div>
-              </motion.div>
+
+                <blockquote className="glass p-8 border-l-4 border-blue-500">
+                  <p className="text-xl text-blue-200/90 italic leading-relaxed">
+                    "Our mission is to democratize access to sophisticated AI solutions while maintaining 
+                    the highest standards of performance and reliability. We're not just building products; 
+                    we're shaping the future of business automation and decision-making."
+                  </p>
+                  <footer className="mt-4 text-blue-300 font-semibold">
+                    — Dorian Sadellari, Founder
+                  </footer>
+                </blockquote>
+              </div>
             </div>
           </motion.div>
         </div>
