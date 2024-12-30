@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
             </p>
 
             <motion.a
-              href="#portfolio"
+              href="#contact"
               className="inline-block px-12 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-lg text-white font-semibold text-lg shadow-lg shadow-blue-500/20 border border-blue-400/20 backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 button-shine shimmer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

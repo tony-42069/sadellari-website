@@ -255,14 +255,14 @@ const EnhancedLanding: React.FC = () => {
                     autonomously manage and optimize their respective domains within the organization.
                     This innovative approach represents a fundamental shift in how businesses can be
                     operated, combining traditional business acumen with cutting-edge artificial
-                    intelligence.
+                    intelligence and machine learning technologies. 
                   </p>
                   <p className="text-blue-200/90 leading-relaxed">
                     Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
                     <span className="blur-sm select-none">ABARE</span> for commercial real estate analysis,{' '}
                     <span className="blur-sm select-none">AiStaff</span> for AI agent deployment, and{' '}
                     <span className="blur-sm select-none">DorianAI</span> for strategic consulting. Each brand represents a convergence of traditional 
-                    business acumen with cutting-edge AI technology.
+                    business acumen with cutting-edge AI tech.
                   </p>
                 </div>
               </div>
@@ -334,36 +334,50 @@ const EnhancedLanding: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Get in Touch
+            Join the Waitlist
           </motion.h2>
           <div className="max-w-md mx-auto bg-white/5 p-8 rounded-xl backdrop-blur-lg border border-white/10">
-            <form>
-              <div className="mb-6">
-                <label htmlFor="email" className="block text-blue-200 mb-2">Email</label>
+            <form onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const email = formData.get('email');
+              
+              try {
+                const response = await fetch('/api/waitlist', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ email }),
+                });
+
+                if (response.ok) {
+                  alert('Thank you! You have been added to the waitlist.');
+                  e.currentTarget.reset();
+                } else {
+                  throw new Error('Failed to submit');
+                }
+              } catch (error) {
+                alert('Something went wrong. Please try again.');
+              }
+            }}>
+              <div className="flex flex-col space-y-4">
                 <input
+                  name="email"
                   type="email"
-                  id="email"
-                  className="w-full px-4 py-2 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
-                  placeholder="your@email.com"
+                  required
+                  className="w-full px-4 py-3 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
+                  placeholder="Enter your email"
                 />
+                <motion.button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-semibold"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Join Waitlist
+                </motion.button>
               </div>
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-blue-200 mb-2">Message</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
-                  placeholder="Your message..."
-                />
-              </div>
-              <motion.button
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-semibold"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Send Message
-              </motion.button>
             </form>
           </div>
         </div>
