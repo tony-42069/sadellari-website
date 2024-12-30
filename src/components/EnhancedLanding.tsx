@@ -209,79 +209,97 @@ const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="flex flex-row flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4">
-              <Image 
-                src="/s-logo-transparent.png"
-                alt="S Logo"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mr-[-0.15em]"
-                priority
-              />
-              <Image 
-                src="/a-logo-1.png"
-                alt="A"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
-              <Image 
-                src="/d-logo.png"
-                alt="D"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
-              <Image 
-                src="/e-logo.png"
-                alt="E"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
-              <Image 
-                src="/l-logo-1.png"
-                alt="L"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
-              <Image 
-                src="/l-logo-2.png"
-                alt="L"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
-              <Image 
-                src="/a-logo-2.png"
-                alt="A"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
-              <Image 
-                src="/r-logo.png"
-                alt="R"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
-              <Image 
-                src="/i-logo.png"
-                alt="I"
-                width={160}
-                height={160}
-                className="h-[1.3em] xs:h-[1.4em] sm:h-[1.6em] w-auto object-contain mx-[-0.2em]"
-                priority
-              />
+            <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4">
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/s-logo-transparent.png"
+                  alt="S Logo"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/a-logo-1.png"
+                  alt="A"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/d-logo.png"
+                  alt="D"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/e-logo.png"
+                  alt="E"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/l-logo-1.png"
+                  alt="L"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/l-logo-2.png"
+                  alt="L"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/a-logo-2.png"
+                  alt="A"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/r-logo.png"
+                  alt="R"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
+              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
+                <Image 
+                  src="/i-logo.png"
+                  alt="I"
+                  width={160}
+                  height={160}
+                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
+                  priority
+                />
+              </div>
             </div>
           </motion.h1>
 
