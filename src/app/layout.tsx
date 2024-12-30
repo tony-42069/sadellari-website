@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
     images: ['/holdco-logo.png'],
   },
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
