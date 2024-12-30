@@ -209,97 +209,19 @@ const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 sm:gap-0.5 sm:tracking-tight sm:text-[3rem]">
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/s-logo-transparent.png"
-                  alt="S Logo"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/a-logo-1.png"
-                  alt="A"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/d-logo.png"
-                  alt="D"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/e-logo.png"
-                  alt="E"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/l-logo-1.png"
-                  alt="L"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/l-logo-2.png"
-                  alt="L"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/a-logo-2.png"
-                  alt="A"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/r-logo.png"
-                  alt="R"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
-                <Image 
-                  src="/i-logo.png"
-                  alt="I"
-                  width={160}
-                  height={160}
-                  className="w-full h-auto object-contain transform scale-[0.8] md:scale-100"
-                  priority
-                />
-              </div>
+            <div className="flex flex-row items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 gap-1 sm:gap-2 tracking-tight sm:text-[3rem]">
+              {['s-logo-transparent', 'a-logo-1', 'd-logo', 'e-logo', 'l-logo-1', 'l-logo-2', 'a-logo-2', 'r-logo', 'i-logo'].map((logo, index) => (
+                <div key={index} className="flex justify-center items-center w-[8vw] sm:w-[6vw] md:w-[4vw] h-auto">
+                  <Image 
+                    src={`/${logo}.png`}
+                    alt={logo[0].toUpperCase()}
+                    width={160}
+                    height={160}
+                    className="w-full h-auto object-contain"
+                    priority
+                  />
+                </div>
+              ))}
             </div>
           </motion.h1>
 
