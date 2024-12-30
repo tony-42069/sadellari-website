@@ -210,7 +210,7 @@ const HeroSection: React.FC = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="flex flex-row items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 gap-[0.03rem] sm:gap-[0.3rem] tracking-tight sm:text-[3rem]">
-              {['s-logo-transparent-cropped', 'a-logo-1-cropped', 'd-logo-cropped', 'e-logo-cropped', 'l-logo-1-cropped', 'l-logo-2-cropped', 'a-logo-2-cropped', 'r-logo-cropped', 'i-logo-cropped'].map((logo, index) => (
+              {['s-logo-cropped', 'a-logo-1-cropped', 'd-logo-cropped', 'e-logo-cropped', 'l-logo-1-cropped', 'l-logo-2-cropped', 'a-logo-2-cropped', 'r-logo-cropped', 'i-logo-cropped'].map((logo, index) => (
                 <div key={index} className="flex justify-center items-center w-[12vh] h-[15vh] sm:w-[9vw] sm:h-auto md:w-[7vw]">
                   <Image 
                     src={`/${logo}.png`}
