@@ -42,7 +42,7 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
               src="/holdco-logo.png.jpg" 
               alt="Sadellari Enterprises" 
               fill
-              className="object-contain"
+              className="object-contain rounded-lg"
             />
           </motion.div>
           
