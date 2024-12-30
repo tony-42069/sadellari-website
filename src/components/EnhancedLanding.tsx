@@ -293,7 +293,7 @@ const EnhancedLanding: React.FC = () => {
                     systems to shape the future of business operations.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed">
-                    Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
+                    Through Sadellari Coming Soon, we're building a revolutionary ecosystem of brands: 
                     <span className="blur-sm select-none">ABARE</span> for commercial real estate analysis,{' '}
                     <span className="blur-sm select-none">AiStaff</span> for AI agent deployment, and{' '}
                     <span className="blur-sm select-none">DorianAI</span> for strategic consulting. Each brand represents a convergence of traditional 
