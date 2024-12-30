@@ -13,6 +13,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ links }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,10 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <motion.nav
@@ -69,6 +74,7 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
           <motion.button
             className="md:hidden text-blue-200 hover:text-blue-400"
             whileTap={{ scale: 0.95 }}
+            onClick={toggleMenu}
           >
             <svg
               className="w-6 h-6"
@@ -85,6 +91,35 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
             </svg>
           </motion.button>
         </div>
+
+        {/* Mobile Menu */}
+        <motion.div
+          className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4`}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: isMenuOpen ? 1 : 0, y: isMenuOpen ? 0 : -20 }}
+          transition={{ duration: 0.2 }}
+        >
+          <div className="flex flex-col space-y-4">
+            {links.map((link) => (
+              <motion.a
+                key={link.href}
+                href={link.href}
+                className="text-blue-200 hover:text-blue-400 transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={(e: React.MouseEvent) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.querySelector(link.href)?.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }}
+              >
+                {link.text}
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </motion.nav>
   );
