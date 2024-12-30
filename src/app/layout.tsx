@@ -5,8 +5,8 @@ import "@/app/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sadellari - Innovating for the Future",
-  description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
+  title: "America's First AI-DAO Operated Holding Company | Sadellari Enterprises",
+  description: "A forward-thinking company creating innovative solutions in commercial real estate and artificial intelligence.",
   robots: {
     index: false,
     follow: false,
@@ -16,6 +16,24 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 1,
     userScalable: false,
+  },
+  openGraph: {
+    title: "America's First AI-DAO Operated Holding Company | Sadellari Enterprises",
+    description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
+    images: [
+      {
+        url: '/s-logo-transparent.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sadellari Enterprises Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "America's First AI-DAO Operated Holding Company | Sadellari Enterprises",
+    description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
+    images: ['/s-logo-transparent.png'],
   },
 };
 

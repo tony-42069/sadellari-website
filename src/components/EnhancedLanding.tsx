@@ -203,27 +203,27 @@ const EnhancedLanding: React.FC = () => {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="glass p-4 text-center">
+                  <div className="glass p-4 text-center rounded-2xl">
                     <div className="text-2xl font-bold text-blue-400">12+</div>
                     <div className="text-sm text-blue-200/70">Active Projects</div>
                   </div>
-                  <div className="glass p-4 text-center">
+                  <div className="glass p-4 text-center rounded-2xl">
                     <div className="text-2xl font-bold text-blue-400">10+</div>
                     <div className="text-sm text-blue-200/70">AI/ML Integrations</div>
                   </div>
-                  <div className="glass p-4 text-center">
+                  <div className="glass p-4 text-center rounded-2xl">
                     <div className="text-2xl font-bold text-blue-400">6+</div>
                     <div className="text-sm text-blue-200/70">CRE Tools</div>
                   </div>
-                  <div className="glass p-4 text-center">
+                  <div className="glass p-4 text-center rounded-2xl">
                     <div className="text-2xl font-bold text-blue-400">1-3</div>
                     <div className="text-sm text-blue-200/70">Days Ship Velocity</div>
                   </div>
-                  <div className="glass p-4 text-center">
+                  <div className="glass p-4 text-center rounded-2xl">
                     <div className="text-2xl font-bold text-blue-400">15</div>
                     <div className="text-sm text-blue-200/70">Years in Banking</div>
                   </div>
-                  <div className="glass p-4 text-center">
+                  <div className="glass p-4 text-center rounded-2xl">
                     <div className="text-2xl font-bold text-blue-400">3</div>
                     <div className="text-sm text-blue-200/70">AI C-Suite Agents</div>
                   </div>
@@ -231,7 +231,7 @@ const EnhancedLanding: React.FC = () => {
               </div>
 
               <div className="space-y-8">
-                <div className="glass p-8">
+                <div className="glass p-8 rounded-2xl">
                   <h3 className="text-2xl font-bold text-blue-300 mb-4">Vision & Leadership</h3>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
                     With over a decade of experience in commercial banking at institutions like Bank of America 
@@ -289,7 +289,7 @@ const EnhancedLanding: React.FC = () => {
               logo="/abare-logo.png.jpg"
               title="ABARE"
               actualBrandName="ABARE"
-              description="An innovative CRE analysis platform combining advanced financial modeling with AI-driven insights. Streamlines deal evaluation, market analysis, and investment decision-making for real estate professionals."
+              description="An innovative CRE analysis platform combining advanced financial modeling with AI-driven insights. Streamlines deal evaluation, market analysis, and investment decisions."
               delay={0.2}
             />
             <BrandCard
@@ -371,7 +371,7 @@ const EnhancedLanding: React.FC = () => {
                 />
                 <motion.button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-semibold"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-2xl font-semibold"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
