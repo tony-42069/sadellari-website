@@ -33,7 +33,7 @@ const InnovationSection: React.FC = () => {
             ].map((item, index) => (
               <motion.div
                 key={item.phase}
-                className="glass p-6 hover:bg-blue-500/5"
+                className="glass p-6 hover:bg-blue-500/5 rounded-2xl"
                 whileHover={{ scale: 1.05, rotateY: index % 2 === 0 ? 5 : -5 }}
               >
                 <div className="text-2xl text-blue-400 mb-2 font-bold">{item.number}</div>

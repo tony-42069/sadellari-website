@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import InnovationSection from './InnovationSection';
 import Image from 'next/image';
+import { Button } from './ui/button';
 
 interface Particle {
   x: number;
@@ -312,7 +313,7 @@ const EnhancedLanding: React.FC = () => {
 
       <section className="py-16 relative z-10">
         <div className="container mx-auto px-4">
-          <blockquote className="glass p-8 border-l-4 border-blue-500 max-w-4xl mx-auto">
+          <blockquote className="glass p-8 border-l-4 border-blue-500 max-w-4xl mx-auto rounded-2xl">
             <p className="text-xl text-blue-200/90 italic leading-relaxed">
               "Our mission is to democratize access to sophisticated AI solutions while maintaining 
               the highest standards of performance and reliability. We're not just building products; 
@@ -336,7 +337,7 @@ const EnhancedLanding: React.FC = () => {
           >
             Join the Waitlist
           </motion.h2>
-          <div className="max-w-md mx-auto bg-white/5 p-8 rounded-xl backdrop-blur-lg border border-white/10">
+          <div className="max-w-md mx-auto bg-white/5 p-8 rounded-2xl backdrop-blur-lg border border-white/10">
             <form onSubmit={async (e) => {
               e.preventDefault();
               const formData = new FormData(e.currentTarget);
@@ -369,14 +370,13 @@ const EnhancedLanding: React.FC = () => {
                   className="w-full px-4 py-3 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
                   placeholder="Enter your email"
                 />
-                <motion.button
+                <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-2xl font-semibold"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  className="w-full py-3 rounded-2xl font-semibold"
+                  variant="gradient"
                 >
                   Join Waitlist
-                </motion.button>
+                </Button>
               </div>
             </form>
           </div>
