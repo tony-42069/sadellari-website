@@ -150,14 +150,9 @@ const BrandCard: React.FC<BrandCardProps> = ({ logo, title, actualBrandName, des
             className="object-contain" 
           />
         </motion.div>
-        <div className="relative">
-          <h3 className="text-xl font-semibold text-blue-300 mb-2 blur-sm select-none">
-            {actualBrandName}
-          </h3>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-blue-300 font-semibold">Coming Soon</span>
-          </div>
-        </div>
+        <h3 className="text-xl font-semibold text-blue-300 mb-2 blur-sm select-none">
+          {actualBrandName}
+        </h3>
         <p className="text-blue-100/80">{description}</p>
       </div>
     </motion.div>
@@ -172,7 +167,6 @@ const EnhancedLanding: React.FC = () => {
         { href: '#home', text: 'Home' },
         { href: '#portfolio', text: 'Portfolio' },
         { href: '#about', text: 'About' },
-        { href: '#innovation', text: 'Innovation' },
         { href: '#contact', text: 'Contact' }
       ]} />
       
@@ -194,21 +188,21 @@ const EnhancedLanding: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <BrandCard
               logo="/abare-logo.png.jpg"
-              title="Coming Soon"
+              title="ABARE"
               actualBrandName="ABARE"
               description="Reimagining commercial real estate analysis through advanced technology"
               delay={0.2}
             />
             <BrandCard
               logo="/aistaff-logo.png.jpg"
-              title="Coming Soon"
+              title="AiStaff"
               actualBrandName="AiStaff"
               description="Enhancing enterprise productivity through intelligent automation"
               delay={0.4}
             />
             <BrandCard
               logo="/dorianai-logo.png.jpg"
-              title="Coming Soon"
+              title="DorianAI"
               actualBrandName="DorianAI"
               description="Delivering strategic AI solutions for complex business challenges"
               delay={0.6}
