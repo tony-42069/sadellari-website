@@ -406,18 +406,9 @@ const EnhancedLanding: React.FC = () => {
                   </p>
                   <p className="text-blue-200/90 leading-relaxed">
                     Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
-                    <span className="relative">
-                      <span className="blur-sm select-none">ABARE</span>
-                      <span className="absolute inset-0 flex items-center justify-center">Coming Soon</span>
-                    </span> for commercial real estate analysis,{' '}
-                    <span className="relative">
-                      <span className="blur-sm select-none">AiStaff</span>
-                      <span className="absolute inset-0 flex items-center justify-center">Coming Soon</span>
-                    </span> for AI agent deployment, and{' '}
-                    <span className="relative">
-                      <span className="blur-sm select-none">DorianAI</span>
-                      <span className="absolute inset-0 flex items-center justify-center">Coming Soon</span>
-                    </span> for strategic consulting. Each brand represents a convergence of traditional 
+                    <span className="blur-sm select-none">ABARE</span> for commercial real estate analysis,{' '}
+                    <span className="blur-sm select-none">AiStaff</span> for AI agent deployment, and{' '}
+                    <span className="blur-sm select-none">DorianAI</span> for strategic consulting. Each brand represents a convergence of traditional 
                     business acumen with cutting-edge AI technology.
                   </p>
                 </div>
