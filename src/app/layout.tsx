@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
     images: [
       {
-        url: '/s-logo-transparent.png',
+        url: '/holdco-logo.png',
         width: 1200,
         height: 630,
         alt: 'Sadellari Enterprises Logo',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "America's First AI-DAO Operated Holding Company | Sadellari Enterprises",
     description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
-    images: ['/s-logo-transparent.png'],
+    images: ['/holdco-logo.png'],
   },
 };
 
