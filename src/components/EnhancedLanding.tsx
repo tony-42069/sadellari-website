@@ -209,7 +209,7 @@ const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 sm:gap-1 sm:tracking-tighter">
+            <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 sm:gap-0.5 sm:tracking-tight sm:text-[3rem]">
               <div className="flex justify-center items-center min-w-[8vw] max-w-[12vw] md:min-w-[4vw] md:max-w-[6vw] h-auto">
                 <Image 
                   src="/s-logo-transparent.png"
