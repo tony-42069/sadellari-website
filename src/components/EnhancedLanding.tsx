@@ -209,9 +209,9 @@ const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="flex flex-row items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 gap-[0.05rem] sm:gap-[0.3rem] tracking-tight sm:text-[3rem]">
+            <div className="flex flex-row items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 gap-[0.03rem] sm:gap-[0.3rem] tracking-tight sm:text-[3rem]">
               {['s-logo-transparent', 'a-logo-1', 'd-logo', 'e-logo', 'l-logo-1', 'l-logo-2', 'a-logo-2', 'r-logo', 'i-logo'].map((logo, index) => (
-                <div key={index} className="flex justify-center items-center w-[12vh] h-[14vh] sm:w-[9vw] sm:h-auto md:w-[7vw]">
+                <div key={index} className="flex justify-center items-center w-[12vh] h-[15vh] sm:w-[9vw] sm:h-auto md:w-[7vw]">
                   <Image 
                     src={`/${logo}.png`}
                     alt={logo[0].toUpperCase()}
