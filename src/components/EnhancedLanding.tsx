@@ -150,9 +150,14 @@ const BrandCard: React.FC<BrandCardProps> = ({ logo, title, actualBrandName, des
             className="object-contain" 
           />
         </motion.div>
-        <h3 className="text-xl font-semibold text-blue-300 mb-2 blur-sm select-none">
-          {actualBrandName}
-        </h3>
+        <div className="relative">
+          <h3 className="text-xl font-semibold text-blue-300 mb-2 blur-sm select-none">
+            {actualBrandName}
+          </h3>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-blue-300 font-semibold">Coming Soon</span>
+          </div>
+        </div>
         <p className="text-blue-100/80">{description}</p>
       </div>
     </motion.div>
@@ -280,7 +285,8 @@ const EnhancedLanding: React.FC = () => {
                     journey with Alliance Business Advisors. While the venture provided more lessons than 
                     successes, it was a transformative experience that strengthened his ability to innovate, 
                     adapt, and persevere.
-
+                  </p>
+                  <p className="text-blue-200/90 leading-relaxed mb-6">
                     Building on these lessons, Dorian is now leveraging his expertise to pioneer the world's 
                     first fully AI-driven and DAO-operated holding company. Over the last six months, he has 
                     embarked on a groundbreaking journey, mastering advanced AI/ML technologies and cloud-based 
