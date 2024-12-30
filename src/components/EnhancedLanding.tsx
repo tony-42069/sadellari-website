@@ -485,8 +485,8 @@ const EnhancedLanding: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 animate-gradient"></div>
                 <div className="relative">
                   <blockquote className="text-lg text-blue-200/90 leading-relaxed italic">
-                    &ldquo;Sadellari Enterprises is more than a company&mdash;it's a reflection of my life's work and aspirations. 
-                    With the Innovation Lab at our core, we're turning bold ideas into tangible results that shape industries.&rdquo;
+                  &ldquo;Sadellari Enterprises is more than a company&mdash;it's a reflection of my life's work and aspirations. 
+                  With the Innovation Lab at our core, we're turning bold ideas into tangible results that shape industries.&rdquo;
                   </blockquote>
                   <p className="text-right mt-4 text-blue-300 font-semibold">&mdash; Dorian Sadellari, Founder</p>
                 </div>
