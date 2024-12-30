@@ -2,7 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const Navigation: React.FC = () => {
+interface NavLink {
+  href: string;
+  text: string;
+}
+
+interface NavigationProps {
+  links: NavLink[];
+}
+
+const Navigation: React.FC<NavigationProps> = ({ links }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -13,12 +22,6 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
-  ];
 
   return (
     <motion.nav
@@ -44,21 +47,21 @@ const Navigation: React.FC = () => {
           </motion.div>
           
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {links.map((link) => (
               <motion.a
-                key={item.name}
-                href={item.href}
+                key={link.href}
+                href={link.href}
                 className="text-blue-200 hover:text-blue-400 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={(e: React.MouseEvent) => {
                   e.preventDefault();
-                  document.querySelector(item.href)?.scrollIntoView({
+                  document.querySelector(link.href)?.scrollIntoView({
                     behavior: 'smooth'
                   });
                 }}
               >
-                {item.name}
+                {link.text}
               </motion.a>
             ))}
           </div>
@@ -87,4 +90,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation; 
+export default Navigation;

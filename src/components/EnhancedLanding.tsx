@@ -3,6 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Navigation from './Navigation';
+import HeroSection from './HeroSection';
+import InnovationSection from './InnovationSection';
 import Image from 'next/image';
 
 interface Particle {
@@ -162,158 +164,22 @@ const BrandCard: React.FC<BrandCardProps> = ({ logo, title, actualBrandName, des
   );
 };
 
-const ContactForm: React.FC = () => {
-  return (
-    <motion.form
-      className="max-w-md mx-auto bg-white/5 p-8 rounded-xl backdrop-blur-lg border border-white/10"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-    >
-      <div className="mb-6">
-        <label htmlFor="email" className="block text-blue-200 mb-2">Email</label>
-        <input
-          type="email"
-          id="email"
-          className="w-full px-4 py-2 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
-          placeholder="your@email.com"
-        />
-      </div>
-      <div className="mb-6">
-        <label htmlFor="message" className="block text-blue-200 mb-2">Message</label>
-        <textarea
-          id="message"
-          rows={4}
-          className="w-full px-4 py-2 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
-          placeholder="Your message..."
-        />
-      </div>
-      <motion.button
-        type="submit"
-        className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-semibold"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-      >
-        Send Message
-      </motion.button>
-    </motion.form>
-  );
-};
-
-const HeroSection: React.FC = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative z-10 w-full overflow-x-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 animate-gradient" />
-      
-      <motion.div
-        className="w-full text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="space-y-6 w-full">
-          <motion.h1 
-            className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-bold w-full"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <div className="flex flex-row items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 gap-[0.03rem] sm:gap-[0.3rem] tracking-tight sm:text-[3rem]">
-              {['s-logo-cropped', 'a-logo-1-cropped', 'd-logo-cropped', 'e-logo-cropped', 'l-logo-1-cropped', 'l-logo-2-cropped', 'a-logo-2-cropped', 'r-logo-cropped', 'i-logo-cropped'].map((logo, index) => (
-                <div key={index} className="flex justify-center items-center w-[12vh] h-[15vh] sm:w-[9vw] sm:h-auto md:w-[7vw]">
-                  <Image 
-                    src={`/${logo}.png`}
-                    alt={logo[0].toUpperCase()}
-                    width={160}
-                    height={160}
-                    className="w-full h-auto object-contain"
-                    priority
-                  />
-                </div>
-              ))}
-            </div>
-          </motion.h1>
-
-          <motion.p 
-            className="text-sm md:text-lg text-blue-200/90 font-light tracking-wide mt-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            ENTERPRISES
-          </motion.p>
-
-          <div className="max-w-3xl mx-auto space-y-8">
-            <p className="text-lg md:text-xl text-blue-200 font-light leading-relaxed">
-              Coming Soon
-            </p>
-
-            <motion.a
-              href="#portfolio"
-              className="inline-block px-12 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-lg text-white font-semibold text-lg shadow-lg shadow-blue-500/20 border border-blue-400/20 backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 button-shine shimmer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Join the Waitlist
-            </motion.a>
-          </div>
-        </div>
-      </motion.div>
-    </section>
-  );
-};
-
-const InnovationSection: React.FC = () => {
-  return (
-    <section className="py-24 relative z-10">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
-        >
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-200 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient">
-              The Innovation Lab
-            </h2>
-            <p className="text-blue-100/80 text-lg leading-relaxed">
-              Our AI/ML Innovation Lab serves as a cutting-edge incubator where advanced 
-              artificial intelligence and machine learning technologies converge with strategic execution. 
-              Through our systematic approach, we develop intelligent solutions that transform 
-              complex business challenges into opportunities for innovation.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-6">
-            {[
-              { phase: 'AI Research', desc: 'Deep Learning & Neural Networks' },
-              { phase: 'ML Development', desc: 'Predictive Analytics & Automation' },
-              { phase: 'Testing', desc: 'Performance & Accuracy Validation' },
-              { phase: 'Launch', desc: 'Deployment & Optimization' }
-            ].map((item, index) => (
-              <motion.div
-                key={item.phase}
-                className="glass p-6 hover:bg-blue-500/5"
-                whileHover={{ scale: 1.05, rotateY: index % 2 === 0 ? 5 : -5 }}
-              >
-                <div className="text-3xl text-blue-400 mb-2 font-bold">0{index + 1}</div>
-                <div className="text-blue-200 font-semibold mb-2">{item.phase}</div>
-                <div className="text-blue-200/70 text-sm">{item.desc}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
 const EnhancedLanding: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
       <ParticleField />
-      <Navigation />
-      <HeroSection />
-      <InnovationSection />
+      <Navigation links={[
+        { href: '#home', text: 'Home' },
+        { href: '#portfolio', text: 'Portfolio' },
+        { href: '#about', text: 'About' },
+        { href: '#innovation', text: 'Innovation' },
+        { href: '#contact', text: 'Contact' }
+      ]} />
       
+      <HeroSection />
+
+      <InnovationSection />
+
       <section id="portfolio" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -348,6 +214,21 @@ const EnhancedLanding: React.FC = () => {
               delay={0.6}
             />
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 relative z-10">
+        <div className="container mx-auto px-4">
+          <blockquote className="glass p-8 border-l-4 border-blue-500 max-w-4xl mx-auto">
+            <p className="text-xl text-blue-200/90 italic leading-relaxed">
+              "Our mission is to democratize access to sophisticated AI solutions while maintaining 
+              the highest standards of performance and reliability. We're not just building products; 
+              we're shaping the future of business automation and decision-making."
+            </p>
+            <footer className="mt-4 text-blue-300 font-semibold">
+              — Dorian Sadellari, Founder
+            </footer>
+          </blockquote>
         </div>
       </section>
 
@@ -400,9 +281,16 @@ const EnhancedLanding: React.FC = () => {
                   <h3 className="text-2xl font-bold text-blue-300 mb-4">Vision & Leadership</h3>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
                     With over a decade of experience in commercial banking at institutions like Bank of America 
-                    and Huntington National Bank, I've developed a deep understanding of financial markets 
-                    and business operations. Now, I'm leveraging that expertise to pioneer the world's first 
-                    fully AI-driven and DAO-operated holding company.
+                    and Huntington National Bank, Dorian Sadellari developed a deep understanding of financial 
+                    markets and business operations. This foundation paved the way for his entrepreneurial 
+                    journey with Alliance Business Advisors. While the venture provided more lessons than 
+                    successes, it was a transformative experience that strengthened his ability to innovate, 
+                    adapt, and persevere.
+
+                    Building on these lessons, Dorian is now leveraging his expertise to pioneer the world's 
+                    first fully AI-driven and DAO-operated holding company. Over the last six months, he has 
+                    embarked on a groundbreaking journey, mastering advanced AI/ML technologies and cloud-based 
+                    systems to shape the future of business operations.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed">
                     Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
@@ -412,17 +300,6 @@ const EnhancedLanding: React.FC = () => {
                     business acumen with cutting-edge AI technology.
                   </p>
                 </div>
-
-                <blockquote className="glass p-8 border-l-4 border-blue-500">
-                  <p className="text-xl text-blue-200/90 italic leading-relaxed">
-                    "Our mission is to democratize access to sophisticated AI solutions while maintaining 
-                    the highest standards of performance and reliability. We're not just building products; 
-                    we're shaping the future of business automation and decision-making."
-                  </p>
-                  <footer className="mt-4 text-blue-300 font-semibold">
-                    — Dorian Sadellari, Founder
-                  </footer>
-                </blockquote>
               </div>
             </div>
           </motion.div>
@@ -439,7 +316,36 @@ const EnhancedLanding: React.FC = () => {
           >
             Get in Touch
           </motion.h2>
-          <ContactForm />
+          <div className="max-w-md mx-auto bg-white/5 p-8 rounded-xl backdrop-blur-lg border border-white/10">
+            <form>
+              <div className="mb-6">
+                <label htmlFor="email" className="block text-blue-200 mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-4 py-2 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-blue-200 mb-2">Message</label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  className="w-full px-4 py-2 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
+                  placeholder="Your message..."
+                />
+              </div>
+              <motion.button
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-semibold"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </div>
         </div>
       </section>
     </div>
