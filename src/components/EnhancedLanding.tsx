@@ -357,7 +357,7 @@ const EnhancedLanding: React.FC = () => {
                 } else {
                   throw new Error('Failed to submit');
                 }
-              } catch (error) {
+              } catch {
                 alert('Something went wrong. Please try again.');
               }
             }}>
