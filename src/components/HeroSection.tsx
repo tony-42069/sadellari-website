@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            COMING SOON
+            Coming Soon
           </motion.p>
 
           <div className="max-w-3xl mx-auto space-y-8">
