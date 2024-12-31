@@ -360,7 +360,9 @@ const EnhancedLanding: React.FC = () => {
                 
                 if (response.ok) {
                   alert(result.message || 'Thank you! You have been added to the waitlist.');
-                  e.currentTarget.reset();
+                  if (e.currentTarget) {
+                    e.currentTarget.reset();
+                  }
                 } else {
                   alert(result.error || 'Something went wrong. Please try again.');
                 }
