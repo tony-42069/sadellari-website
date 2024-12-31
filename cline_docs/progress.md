@@ -2,6 +2,7 @@
 - Optimized letter logos for mobile display
 - Reorganized portfolio section layout
 - Updated ABARE branding
+- Updated favicon to use S logo
 
 # In Progress
 - Mobile responsiveness testing
