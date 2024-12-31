@@ -18,10 +18,12 @@ const InnovationSection: React.FC = () => {
               The Innovation Lab
             </h2>
             <p className="text-blue-100/80 text-lg leading-relaxed">
-              Our AI/ML Innovation Lab serves as a cutting-edge incubator where advanced 
-              artificial intelligence and machine learning technologies converge with strategic execution. 
-              Through our systematic approach, we develop intelligent solutions that transform 
-              complex business challenges into opportunities for innovation.
+              Sadellari Enterprises’ AI/ML Innovation Lab is a dynamic incubator where cutting-edge artificial
+              intelligence and machine learning technologies merge with strategic execution. Acting as the starting
+              point for all our ventures, the lab transforms ideas into intelligent solutions, rigorously testing and
+              refining them for real-world impact. Brands that demonstrate profitability and scalability within the
+              lab are launched as independent entities, embodying our commitment to fostering innovation and
+              creating lasting value.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">

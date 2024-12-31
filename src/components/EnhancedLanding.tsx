@@ -205,15 +205,15 @@ const EnhancedLanding: React.FC = () => {
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">12+</div>
+                    <div className="text-2xl font-bold text-blue-400">30+</div>
                     <div className="text-sm text-blue-200/70">Active Projects</div>
                   </div>
                   <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">10+</div>
+                    <div className="text-2xl font-bold text-blue-400">20+</div>
                     <div className="text-sm text-blue-200/70">AI/ML Integrations</div>
                   </div>
                   <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">6+</div>
+                    <div className="text-2xl font-bold text-blue-400">9+</div>
                     <div className="text-sm text-blue-200/70">CRE Tools</div>
                   </div>
                   <div className="glass p-4 text-center rounded-2xl">
@@ -225,7 +225,7 @@ const EnhancedLanding: React.FC = () => {
                     <div className="text-sm text-blue-200/70">Years in Banking</div>
                   </div>
                   <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">3</div>
+                    <div className="text-2xl font-bold text-blue-400">4</div>
                     <div className="text-sm text-blue-200/70">AI C-Suite Agents</div>
                   </div>
                 </div>
@@ -235,9 +235,9 @@ const EnhancedLanding: React.FC = () => {
                 <div className="glass p-8 rounded-2xl">
                   <h3 className="text-2xl font-bold text-blue-300 mb-4">Vision & Leadership</h3>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    With over a decade of experience in commercial banking at institutions like Bank of America 
-                    and Huntington National Bank, Dorian Sadellari developed a deep understanding of financial 
-                    markets and business operations.
+                    With over a decade of experience in banking at institutions like Bank of America 
+                    and Huntington National Bank, Dorian Sadellari developed a deep understanding of various financial 
+                    markets and complex business operations.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
                     This foundation paved the way for his entrepreneurial journey with Alliance Business Advisors in 2021. 
@@ -245,25 +245,24 @@ const EnhancedLanding: React.FC = () => {
                     that strengthened his ability to innovate, adapt, and persevere.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    Building on these lessons and everything learned during an intensive six-month journey 
-                    mastering advanced AI/ML technologies and cloud-based systems, Dorian is now 
-                    leveraging his expertise to pioneer the world's first fully AI-driven and DAO-operated 
-                    holding company. 
+                    Building on these lessons, Dorian embarked on a transformative six-month journey mastering
+                    advanced artificial intelligence and machine learning technologies. Armed with this expertise, 
+                    he is now leading a revolutionary concept: the first fully AI-driven and DAO-operated 
+                    holding company in America.
                   </p>  
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    In a groundbreaking development, he has assembled an advanced AI 
-                    C-Suite team, featuring specialized agents for CEO, CFO, and CTO roles, each designed to 
+                    At the heart of this groundbreaking initiative is an advanced AI-powered C-Suite team,
+                    featuring specialized agents for CEO, CFO, and CTO roles, each designed to 
                     autonomously manage and optimize their respective domains within the organization.
-                    This innovative approach represents a fundamental shift in how businesses can be
-                    operated, combining traditional business acumen with cutting-edge artificial
-                    intelligence and machine learning technologies. 
+                    This innovative approach blends traditional business expertise with cutting edge AI/ML
+                    tech to redefine how businesses of the future oprate. 
                   </p>
                   <p className="text-blue-200/90 leading-relaxed">
                     Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
                     <span className="blur-sm select-none">ABARE</span> for commercial real estate analysis,{' '}
                     <span className="blur-sm select-none">AiStaff</span> for AI agent deployment, and{' '}
-                    <span className="blur-sm select-none">DorianAI</span> for strategic consulting. Each brand represents a convergence of traditional 
-                    business acumen with cutting-edge AI tech.
+                    <span className="blur-sm select-none">DorianAI</span> for strategic AI/ML consulting. Each brand is a convergence of traditional 
+                    business acumen with cutting-edge tech.
                   </p>
                 </div>
               </div>
@@ -287,26 +286,29 @@ const EnhancedLanding: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <BrandCard
-              logo="/abare-logo.png.jpg"
+              logo="/a3-final-cropped.png"
               title="ABARE"
               actualBrandName="ABARE"
               description="An innovative CRE analysis platform combining advanced financial modeling with AI-driven insights. Streamlines deal evaluation, market analysis, and investment decisions."
               delay={0.2}
             />
             <BrandCard
-              logo="/aistaff-logo.png.jpg"
-              title="AiStaff"
-              actualBrandName="AiStaff"
-              description="A next-generation AI agent marketplace revolutionizing enterprise operations. Deploy customized AI solutions for workflow automation, data analysis, and business process optimization."
-              delay={0.4}
-            />
-            <BrandCard
-              logo="/dorianai-logo.png.jpg"
+              logo="/d-logo-final-cropped.png"
               title="DorianAI"
               actualBrandName="DorianAI"
               description="Expert AI consulting and system integration services, transforming businesses through custom ML solutions, strategic automation, and advanced analytics implementations."
+              delay={0.4}
+            />
+            <BrandCard
+              logo="/e-logo-final-cropped.png"
+              title="AiStaff"
+              actualBrandName="AiStaff"
+              description="A next-generation AI agent marketplace revolutionizing enterprise operations. Deploy customized AI solutions for workflow automation, data analysis, and business process optimization."
               delay={0.6}
             />
+          </div>
+          <div className="mt-12 text-center text-blue-200/80">
+            Estimated launch for brands: Late January 2025
           </div>
         </div>
       </section>
@@ -315,9 +317,11 @@ const EnhancedLanding: React.FC = () => {
         <div className="container mx-auto px-4">
           <blockquote className="glass p-8 border-l-4 border-blue-500 max-w-4xl mx-auto rounded-2xl">
             <p className="text-xl text-blue-200/90 italic leading-relaxed">
-              "Our mission is to democratize access to sophisticated AI solutions while maintaining 
-              the highest standards of performance and reliability. We're not just building products; 
-              we're shaping the future of business automation and decision-making."
+              "At Sadellari Enterprises, our vision is to revolutionize how businesses operate by seamlessly 
+              integrating human ingenuity with the power of artificial intelligence. We aim to empower
+              solopreneurs, enterprises, and governments with cutting-edge, accessible tools that unlock their full
+              potential. By driving sustainable, data-driven solutions that elevate industries, enhance productivity,
+              and redefine success in the modern era.
             </p>
             <footer className="mt-4 text-blue-300 font-semibold">
               — Dorian Sadellari, Founder
