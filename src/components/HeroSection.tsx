@@ -26,7 +26,8 @@ const HeroSection: React.FC = () => {
                 <div key={index} className={`flex justify-center items-center w-[12vh] h-[10vh] sm:w-[9vw] sm:h-[12vw] md:w-[7vw] md:h-[9vw] ${
                   logo.includes('a-logo') ? 'scale-115' : 
                   logo.includes('l-logo-2') ? 'scale-95' : 
-                  logo === 'd-logo-final-cropped' ? 'scale-95' : ''
+                  logo === 'd-logo-final-cropped' ? 'scale-95' : 
+                  logo === 'i-logo-final-cropped' ? 'scale-90' : ''
                 }`}>
                   <Image 
                     src={`/${logo}.png`}
