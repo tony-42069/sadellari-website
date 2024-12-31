@@ -44,7 +44,7 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
             whileHover={{ scale: 1.05 }}
           >
             <Image 
-              src="/holdco-logo.png" 
+              src="/s-logo-transparent.png" 
               alt="Sadellari Enterprises" 
               fill
               className="object-contain rounded-lg"
