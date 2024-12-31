@@ -23,13 +23,17 @@ const HeroSection: React.FC = () => {
           >
             <div className="flex flex-row items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 gap-[0.03rem] sm:gap-[0.3rem] tracking-tight sm:text-[3rem]">
 {['s-logo-final-crop', 'a-logo-1-final-cropped', 'd-logo-final-cropped', 'e-logo-final-cropped', 'l-logo-1-final-cropped', 'l-logo-2-final-cropped', 'a-logo-2-final-cropped', 'r-logo-final-cropped', 'i-logo-final-cropped'].map((logo, index) => (
-                <div key={index} className="flex justify-center items-center w-[12vh] h-[15vh] sm:w-[9vw] sm:h-auto md:w-[7vw]">
+                <div key={index} className={`flex justify-center items-center w-[12vh] h-[15vh] sm:w-[9vw] sm:h-[12vw] md:w-[7vw] md:h-[9vw] ${
+                  logo.includes('a-logo') ? 'scale-115' : 
+                  logo.includes('l-logo-2') ? 'scale-95' : 
+                  logo === 'd-logo-final-cropped' ? 'scale-95' : ''
+                }`}>
                   <Image 
                     src={`/${logo}.png`}
                     alt={logo[0].toUpperCase()}
                     width={160}
                     height={160}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-full object-contain"
                     priority
                   />
                 </div>
