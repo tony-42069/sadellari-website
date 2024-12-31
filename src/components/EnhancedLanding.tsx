@@ -356,14 +356,16 @@ const EnhancedLanding: React.FC = () => {
                   body: JSON.stringify({ email }),
                 });
 
+                const result = await response.json();
+                
                 if (response.ok) {
-                  alert('Thank you! You have been added to the waitlist.');
+                  alert(result.message || 'Thank you! You have been added to the waitlist.');
                   e.currentTarget.reset();
                 } else {
-                  throw new Error('Failed to submit');
+                  alert(result.error || 'Something went wrong. Please try again.');
                 }
-              } catch {
-                alert('Something went wrong. Please try again.');
+              } catch (error) {
+                alert('An unexpected error occurred. Please try again later.');
               }
             }}>
               <div className="flex flex-col space-y-4">
