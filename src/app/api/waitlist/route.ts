@@ -42,8 +42,9 @@ export async function POST(request: Request) {
     );
   } catch (error) {
     console.error('Waitlist submission error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred';
     return NextResponse.json(
-      { error: 'An unexpected error occurred. Please try again later.' },
+      { error: errorMessage },
       { status: 500 }
     );
   } finally {
