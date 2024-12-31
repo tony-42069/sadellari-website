@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
                   logo === 'i-logo-final-cropped' ? 'scale-90' : ''
                 }`}>
                   <Image 
-                    src={`/${logo}${logo.includes('.jpg') ? '' : '.png'}`}
+                    src={`/${logo}${logo.includes('.jpg') ? '' : '.png'}?v=2`}
                     alt={logo[0].toUpperCase()}
                     width={160}
                     height={160}
