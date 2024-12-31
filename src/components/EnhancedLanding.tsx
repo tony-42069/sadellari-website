@@ -364,8 +364,9 @@ const EnhancedLanding: React.FC = () => {
                 } else {
                   alert(result.error || 'Something went wrong. Please try again.');
                 }
-              } catch (error) {
-                alert('An unexpected error occurred. Please try again later.');
+              } catch (error: any) {
+                console.error('Waitlist submission error:', error);
+                alert(`An unexpected error occurred: ${error.message || 'Please try again later.'}`);
               }
             }}>
               <div className="flex flex-col space-y-4">
