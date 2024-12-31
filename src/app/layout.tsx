@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/holdco-logo.png'],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/s-logo-final-crop.png',
   },
 };
 

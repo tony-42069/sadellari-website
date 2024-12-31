@@ -1,14 +1,8 @@
-# Active Context - Letter Proportions
+# Recent Changes
+- Updated ABARE logo to use a3-final-cropped.png
+- Reordered portfolio section to show A-D-E sequence
+- Removed unused a-logo-2.png file
 
-## Current State
-- Final letter height adjustments implemented:
-  - L letters: h-[7vh]
-  - I letter: h-[7.5vh]
-  - Other letters maintain original heights
-- Image cropping optimized for mobile display
-- Cache-busting implemented with ?v=2 query parameter
-
-## Next Steps
-1. Monitor mobile display proportions
-2. Consider further I letter height adjustment if needed
-3. Continue with other site improvements
+# Next Steps
+- Monitor website performance on mobile devices
+- Gather feedback on new logo and layout
