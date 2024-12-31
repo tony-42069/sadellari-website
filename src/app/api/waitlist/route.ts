@@ -1,15 +1,30 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-  const { email } = await request.json();
+  try {
+    const { email } = await request.json();
 
-  // Here you would typically:
-  // 1. Validate the email
-  // 2. Store it in your database or email service
-  // 3. Return appropriate response
+    // Basic email validation
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address' },
+        { status: 400 }
+      );
+    }
 
-  // For now, we'll just log it and return success
-  console.log('New waitlist signup:', email);
-  
-  return NextResponse.json({ success: true });
+    // Here you would typically store the email in your database or email service
+    // For now, we'll just log it
+    console.log('New waitlist signup:', email);
+    
+    return NextResponse.json(
+      { success: true, message: 'Thank you for joining the waitlist!' },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error('Waitlist submission error:', error);
+    return NextResponse.json(
+      { error: 'An unexpected error occurred. Please try again later.' },
+      { status: 500 }
+    );
+  }
 }
