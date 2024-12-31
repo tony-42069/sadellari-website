@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
           >
             <div className="flex flex-row items-center justify-center styled-letters bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.5)] filter hover:brightness-110 transition-all max-w-full overflow-x-hidden px-4 gap-[0.03rem] sm:gap-[0.3rem] tracking-tight sm:text-[3rem]">
 {['s-logo-final-crop', 'a3-final-cropped', 'd-logo-final-cropped', 'e-logo-final-cropped', 'l-logo-1-final-cropped', 'l-logo-2-final-cropped', 'a-logo-1-final-cropped', 'r-logo-final-cropped', 'i-logo-final-cropped'].map((logo, index) => (
-                <div key={index} className={`flex justify-center items-center w-[12vh] ${logo === 'a-logo-1-final-cropped' ? 'h-[14vh]' : logo.includes('l-logo') ? 'h-[7vh]' : logo === 'i-logo-final-cropped' ? 'h-[8vh]' : 'h-[10vh]'} sm:w-[9vw] sm:h-[12vw] md:w-[7vw] md:h-[9vw] ${
+                <div key={index} className={`flex justify-center items-center w-[12vh] ${logo === 'a-logo-1-final-cropped' ? 'h-[14vh]' : logo.includes('l-logo') ? 'h-[7vh]' : logo === 'i-logo-final-cropped' ? 'h-[7.5vh]' : 'h-[10vh]'} sm:w-[9vw] sm:h-[12vw] md:w-[7vw] md:h-[9vw] ${
                   logo.includes('a-logo') ? 'scale-115' : 
                   logo.includes('l-logo') ? 'scale-90' : 
                   logo === 'd-logo-final-cropped' ? 'scale-90' : 
