@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import InnovationSection from './InnovationSection';
+import GovernanceSection from './GovernanceSection';
 import Image from 'next/image';
 import { Button } from './ui/button';
 
@@ -235,8 +236,8 @@ const EnhancedLanding: React.FC = () => {
                 <div className="glass p-8 rounded-2xl">
                   <h3 className="text-2xl font-bold text-blue-300 mb-4">Vision & Leadership</h3>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    With over a decade of experience in banking at institutions like Bank of America 
-                    and Huntington National Bank, Dorian Sadellari developed a deep understanding of various financial 
+                    With over a decade of various experience in banking at institutions like Bank of America 
+                    and Huntington National Bank, Dorian Sadellari developed a deep understanding of financial 
                     markets and complex business operations.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
@@ -272,6 +273,8 @@ const EnhancedLanding: React.FC = () => {
       </section>
 
       <InnovationSection />
+
+      <GovernanceSection />
 
       <section id="portfolio" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
