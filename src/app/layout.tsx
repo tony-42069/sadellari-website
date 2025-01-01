@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/app/globals.css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "America's First AI-DAO Operated Holding Company | Sadellari Enterprises",
+  title: "Sadellari Enterprises",
   description: "A forward-thinking company creating innovative solutions in commercial real estate and artificial intelligence.",
   robots: {
     index: false,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     userScalable: false,
   },
   openGraph: {
-    title: "America's First AI-DAO Operated Holding Company | Sadellari Enterprises",
+    title: "Sadellari Enterprises",
     description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "America's First AI-DAO Operated Holding Company | Sadellari Enterprises",
+    title: "Sadellari Enterprises",
     description: "A forward-thinking company creating innovative solutions in real estate and artificial intelligence.",
     images: ['/holdco-logo.png'],
   },

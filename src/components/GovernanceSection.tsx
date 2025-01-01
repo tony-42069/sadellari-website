@@ -29,7 +29,7 @@ const GovernanceSection = () => {
                 <li>CEO Agent: Strategic decision making</li>
                 <li>CFO Agent: Financial oversight</li>
                 <li>CTO Agent: Technical direction</li>
-                <li>CLO Agent: Legal counsel</li>
+                <li>CLO Agent: Advanced legal counsel</li>
               </ul>
               <h4 className="text-xl font-semibold text-blue-300">Human Advisors:</h4>
               <ul className="list-disc pl-6 space-y-2">
