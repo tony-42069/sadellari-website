@@ -321,10 +321,10 @@ const EnhancedLanding: React.FC = () => {
           <blockquote className="glass p-8 border-l-4 border-blue-500 max-w-4xl mx-auto rounded-2xl">
             <p className="text-xl text-blue-200/90 italic leading-relaxed">
               "At Sadellari Enterprises, our vision is to revolutionize how businesses operate by seamlessly 
-              integrating human ingenuity with the power of artificial intelligence. We aim to empower
-              solopreneurs, enterprises, and governments with cutting-edge, accessible tools that unlock their full
-              potential. By driving sustainable, data-driven solutions that elevate industries, enhance productivity,
-              and redefine success in the modern era.
+              integrating human ingenuity with the power of artificial intelligence. We aim to empower solopreneurs,
+              small businesses, enterprises, and governments with cutting-edge, accessible tools that unlock their
+              full potential. By driving sustainable, data-driven solutions that elevate industries, enhance 
+              productivity, and redefine success in the modern era.
             </p>
             <footer className="mt-4 text-blue-300 font-semibold">
               — Dorian Sadellari, Founder

@@ -11,12 +11,12 @@ const GovernanceSection = () => {
         <div className="space-y-12 text-blue-200/90">
           {/* Governance Overview */}
           <div className="glass p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-blue-300 mb-4">Governance Overview</h3>
+            <h3 className="text-2xl font-bold text-blue-300 mb-4">Overview</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>Decentralized Autonomous Organization (DAO) structure</li>
               <li>AI-powered decision making</li>
-              <li>Community-driven governance model</li>
-              <li>Transparent and auditable operations</li>
+              <li>Smart contract execution of business strategies</li>
+              <li>Transparent and open-source operations</li>
             </ul>
           </div>
 
