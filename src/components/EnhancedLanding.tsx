@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import InnovationSection from './InnovationSection';
 import GovernanceSection from './GovernanceSection';
+import TimelineSection from './TimelineSection';
 import Image from 'next/image';
 import { Button } from './ui/button';
 
@@ -315,15 +316,16 @@ const EnhancedLanding: React.FC = () => {
           </div>
         </div>
       </section>
+      <TimelineSection />
 
       <section className="py-16 relative z-10">
         <div className="container mx-auto px-4">
           <blockquote className="glass p-8 border-l-4 border-blue-500 max-w-4xl mx-auto rounded-2xl">
             <p className="text-xl text-blue-200/90 italic leading-relaxed">
-              "At Sadellari Enterprises, our vision is to revolutionize how businesses operate by seamlessly 
-              integrating human ingenuity with the power of artificial intelligence. We aim to empower solopreneurs,
-              small businesses, enterprises, and governments with cutting-edge, accessible tools that unlock their
-              full potential. By driving sustainable, data-driven solutions that elevate industries, enhance 
+              "At Sadellari Enterprises, our vision is to revolutionize how businesses operate by seamlessly integrating human
+              authenticity with the power of artificial intelligence and machine learning. We aim to empower solopreneurs,
+              small businesses, enterprises, and organizations with cutting-edge, custom tools that unlock their
+              full potential. By implementing the latest and greatest, data-driven solutions that elevate industries, enhance 
               productivity, and redefine success in the modern era.
             </p>
             <footer className="mt-4 text-blue-300 font-semibold">
