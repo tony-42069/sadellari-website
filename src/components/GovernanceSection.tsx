@@ -42,7 +42,7 @@ const GovernanceSection = () => {
           <div className="glass p-8 rounded-2xl">
             <h3 className="text-2xl font-bold text-blue-300 mb-4">AI-DAO Engine</h3>
             <p className="mb-6">
-              A Decentralized Autonomous Organization (DAO) is a form of business organization where decisions are automated and transparent, powered by smart contracts. At Sadellari Enterprises, we're taking this concept further:
+              A Decentralized Autonomous Organization (DAO) is a form of business organization where decisions are automated and open-sourced, powered by smart contracts. At Sadellari Enterprises, we're taking this concept further. While traditional DAOs rely on human voting, our AI-DAO engine integrates advanced AI agents directly into the governance structure, creating a system that autonomously runs an entire holding company.
             </p>
             <div className="space-y-4">
               <h4 className="text-xl font-semibold text-blue-300"></h4>
@@ -50,11 +50,11 @@ const GovernanceSection = () => {
                 <li>Fully autonomous decision-making system</li>
                 <li>Powered by advanced AI agents</li>
                 <li>Real-time business operations</li>
-                <li>Transparent and verifiable execution</li>
+                <li>Transparent and open-source execution</li>
               </ul>
               <h4 className="text-xl font-semibold text-blue-300">How It Works:</h4>
               <p>
-                Our AI agents actively manage and operate the business through our custom DAO engine, making Sadellari Enterprises the world's first truly autonomous organization. Every decision, from strategic planning to resource allocation, is handled by our AI Leadership Council on the guidance of the Board of Directors, working tirelessly 24/7.
+                Our AI agents actively manage and operate the business through our custom DAO engine, making Sadellari Enterprises the one of world's first truly autonomous organization. Every decision, from strategic planning to resource allocation, is handled by our AI C-Suite Council on the guidance of the Board of Directors, working tirelessly 24/7.
               </p>
             </div>
           </div>
