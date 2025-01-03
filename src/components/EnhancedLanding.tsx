@@ -247,9 +247,9 @@ const EnhancedLanding: React.FC = () => {
                     that strengthened his ability to innovate, adapt, and persevere.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    Building on these lessons, Dorian embarked on a transformative six-month journey mastering
-                    advanced artificial intelligence and machine learning technologies. Armed with this expertise, 
-                    he is now leading a revolutionary concept: the first fully AI-driven and DAO-operated 
+                    Building on these lessons, in the 2H of 2024, Dorian embarked on a transformative six-month journey 
+                    mastering advanced artificial intelligence and machine learning technologies. Armed with this
+                    expertise, he is now leading a revolutionary concept: the first fully AI-driven and DAO-operated 
                     holding company in America.
                   </p>  
                   <p className="text-blue-200/90 leading-relaxed mb-6">
@@ -274,8 +274,6 @@ const EnhancedLanding: React.FC = () => {
       </section>
 
       <InnovationSection />
-
-      <GovernanceSection />
 
       <section id="portfolio" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
@@ -316,6 +314,8 @@ const EnhancedLanding: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <GovernanceSection />
       <TimelineSection />
 
       <section className="py-16 relative z-10">

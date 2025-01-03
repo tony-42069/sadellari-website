@@ -16,6 +16,8 @@ cot # Active Context
 - Updated favicon to use S logo
 - Added TimelineSection component
 - Positioned TimelineSection below Portfolio section
+- Updated Governance Overview section with new title and bullet points
+- Fixed Roadmap visibility on production site
 
 ## Next Steps
 - Review governance section in production
