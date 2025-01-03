@@ -247,7 +247,7 @@ const EnhancedLanding: React.FC = () => {
                     that strengthened his ability to innovate, adapt, and persevere.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    Building on these lessons, in the 2H of 2024, Dorian embarked on a transformative six-month journey 
+                    Building on these lessons, in 2H of 2024, Dorian embarked on a transformative six-month journey 
                     mastering advanced artificial intelligence and machine learning technologies. Armed with this
                     expertise, he is now leading a revolutionary concept: the first fully AI-driven and DAO-operated 
                     holding company in America.
