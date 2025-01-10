@@ -111,59 +111,6 @@ const ParticleField: React.FC = () => {
   );
 };
 
-interface BrandCardProps {
-  logo: string;
-  title: string;
-  actualBrandName: string;
-  description: string;
-  delay?: number;
-}
-
-const BrandCard: React.FC<BrandCardProps> = ({ logo, title, actualBrandName, description, delay = 0 }) => {
-  const controls = useAnimation();
-  const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    controls.start({ opacity: 1, y: 0 });
-  }, [controls]);
-
-  return (
-    <motion.div
-      className="relative group"
-      initial={{ opacity: 0, y: 50 }}
-      animate={controls}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3, delay }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl blur-xl transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
-      <div className="relative p-6 backdrop-blur-lg bg-white/5 rounded-xl border border-white/10 overflow-hidden">
-        <motion.div
-          className="relative w-24 h-24 mx-auto mb-4"
-          animate={isHovered ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
-        >
-          <Image 
-            src={logo} 
-            alt={title} 
-            fill
-            className="object-contain" 
-          />
-        </motion.div>
-        <div className="relative">
-          <h3 className="text-xl font-semibold text-blue-300 mb-2 blur-sm select-none">
-            {actualBrandName}
-          </h3>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-blue-300 font-semibold">Coming Soon</span>
-          </div>
-        </div>
-        <p className="text-blue-100/80">{description}</p>
-      </div>
-    </motion.div>
-  );
-};
-
 const EnhancedLanding: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
