@@ -1,10 +1,9 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
-import Image from 'next/image';
 import { Button } from './ui/button';
 
 interface Particle {
