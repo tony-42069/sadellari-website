@@ -171,16 +171,10 @@ const EnhancedLanding: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
       <ParticleField />
-      <Navigation links={[
-        { href: '#home', text: 'Home' },
-        { href: '#about', text: 'About' },
-        { href: '#innovation', text: 'Innovation' },
-        { href: '#portfolio', text: 'Portfolio' },
-        { href: '#contact', text: 'Contact' }
-      ]} />
       
       <HeroSection />
 
+<<<<<<< HEAD
       <section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
@@ -336,6 +330,9 @@ const EnhancedLanding: React.FC = () => {
       </section>
 
 
+=======
+      {/* Contact/Waitlist Section */}
+>>>>>>> temp-changes
       <section id="contact" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -344,7 +341,7 @@ const EnhancedLanding: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Join the Waitlist
+            
           </motion.h2>
           <div className="max-w-md mx-auto bg-white/5 p-8 rounded-2xl backdrop-blur-lg border border-white/10">
             <form onSubmit={async (e) => {
@@ -397,6 +394,34 @@ const EnhancedLanding: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Everything after waitlist wrapped in hidden div */}
+      <div style={{ display: 'none' }}>
+        <Navigation links={[
+          { href: '#home', text: 'Home' },
+          { href: '#about', text: 'About' },
+          { href: '#innovation', text: 'Innovation' },
+          { href: '#portfolio', text: 'Portfolio' },
+          { href: '#contact', text: 'Contact' }
+        ]} />
+        
+        <section id="about" className="py-24 relative z-10">
+          {/* [Your existing about section content remains exactly as is] */}
+        </section>
+
+        <InnovationSection />
+
+        <section id="portfolio" className="py-24 relative z-10">
+          {/* [Your existing portfolio section content remains exactly as is] */}
+        </section>
+
+        <GovernanceSection />
+        <TimelineSection />
+
+        <section className="py-16 relative z-10">
+          {/* [Your existing quote section content remains exactly as is] */}
+        </section>
+      </div>
     </div>
   );
 };
