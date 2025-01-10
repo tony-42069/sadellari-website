@@ -4,9 +4,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
-import InnovationSection from './InnovationSection';
-import GovernanceSection from './GovernanceSection';
-import TimelineSection from './TimelineSection';
 import Image from 'next/image';
 import { Button } from './ui/button';
 
@@ -183,7 +180,6 @@ const EnhancedLanding: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Join the Waitlist
           </motion.h2>
           <div className="max-w-md mx-auto bg-white/5 p-8 rounded-2xl backdrop-blur-lg border border-white/10">
             <form onSubmit={async (e) => {
@@ -237,35 +233,18 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-      {/* Everything after waitlist wrapped in hidden div */}
-      <div style={{ display: 'none' }}>
-        <Navigation links={[
-          { href: '#home', text: 'Home' },
-          { href: '#about', text: 'About' },
-          { href: '#innovation', text: 'Innovation' },
-          { href: '#portfolio', text: 'Portfolio' },
-          { href: '#contact', text: 'Contact' }
-        ]} />
-        
-        <section id="about" className="py-24 relative z-10">
-          {/* [Your existing about section content remains exactly as is] */}
-        </section>
-
-        <InnovationSection />
-
-        <section id="portfolio" className="py-24 relative z-10">
-          {/* [Your existing portfolio section content remains exactly as is] */}
-        </section>
-
-        <GovernanceSection />
-        <TimelineSection />
-
-        <section className="py-16 relative z-10">
-          {/* [Your existing quote section content remains exactly as is] */}
-        </section>
-      </div>
+    {/* Everything after waitlist wrapped in hidden div */}
+    <div style={{ display: 'none' }}>
+      <Navigation links={[
+        { href: '#home', text: 'Home' },
+        { href: '#about', text: 'About' },
+        { href: '#innovation', text: 'Innovation' },
+        { href: '#portfolio', text: 'Portfolio' },
+        { href: '#contact', text: 'Contact' }
+      ]} />
+    </div>
     </div>
   );
 };
 
-export default EnhancedLanding;
+export default EnhancedLanding
