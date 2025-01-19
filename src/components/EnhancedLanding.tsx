@@ -190,7 +190,7 @@ const EnhancedLanding: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow">
-              About Us
+              About
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12">
@@ -283,7 +283,7 @@ const EnhancedLanding: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Our Portfolio
+            Portfolio
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-8">
