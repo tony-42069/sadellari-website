@@ -28,7 +28,7 @@ const GovernanceSection = () => {
               <div>
                 <h4 className="font-semibold text-blue-300">AI Agents</h4>
                 <ul className="list-disc list-inside text-blue-200/90">
-                  <li>CEO Agent: Strategic decision making</li>
+                  <li>CEO Agent: Strategic decisions </li>
                   <li>CFO Agent: Financial oversight</li>
                   <li>CTO Agent: Technical direction</li>
                   <li>CLO Agent: Legal counsel</li>
@@ -60,7 +60,7 @@ const GovernanceSection = () => {
               </ul>
               <h4 className="text-xl font-semibold text-blue-300">How It Works:</h4>
               <p>
-                Our AI agents actively manage and operate the business through our custom DAO engine, making Sadellari Enterprises the one of world's first truly autonomous organization. Every decision, from strategic planning to resource allocation, is handled by our AI C-Suite Council on the guidance of the Board of Directors, working tirelessly 24/7.
+                Our AI agents actively manage and operate the business through our custom DAO engine, making Sadellari Enterprises the one of world's first truly autonomous organizations. Every decision, from strategic planning to resource allocation, is handled by our AI C-Suite Council on the guidance of the Board of Directors, working tirelessly 24/7.
               </p>
             </div>
           </div>
