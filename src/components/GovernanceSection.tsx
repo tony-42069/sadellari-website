@@ -31,6 +31,7 @@ const GovernanceSection = () => {
                   <li>CEO Agent: Strategic decision making</li>
                   <li>CFO Agent: Financial oversight</li>
                   <li>CTO Agent: Technical direction</li>
+                  <li>CLO Agent: Legal counsel</li>
                 </ul>
               </div>
               <div>
@@ -47,7 +48,7 @@ const GovernanceSection = () => {
           <div className="glass p-8 rounded-2xl">
             <h3 className="text-2xl font-bold text-blue-300 mb-4">AI-DAO Engine</h3>
             <p className="mb-6">
-              A Decentralized Autonomous Organization (DAO) is a form of business organization where decisions are automated and open-sourced, powered by smart contracts. At Sadellari Enterprises, we're taking this concept further. While traditional DAOs rely on human voting, our AI-DAO engine integrates advanced AI agents directly into the governance structure, creating a system that autonomously runs an entire holding company.
+              A Decentralized Autonomous Organization (DAO) is a form of business organization where decisions are automated and open-sourced, powered by smart contracts. At Sadellari Enterprises, we're taking this concept further. While traditional DAOs rely on human voting, our AI-DAO engine integrates advanced AI agents directly into the governance structure, creating a system that autonomously runs an entire holding company. Through months of intensive development, Dorian has engineered a custom, state-of-the-art AI-DAO engine that forms the autonomous backbone of Sadellari Enterprises, fundamentally transforming traditional business operations and governance.
             </p>
             <div className="space-y-4">
               <h4 className="text-xl font-semibold text-blue-300"></h4>

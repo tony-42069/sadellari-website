@@ -57,7 +57,6 @@ const TimelineSection = () => {
                 <h3 className="text-2xl font-bold text-blue-300 mb-2">Q4 2024</h3>
                 <p className="text-blue-200">
                   - Launch final 2 brands
-                  - Reach $1M holdco revenue target
                 </p>
               </div>
             </div>

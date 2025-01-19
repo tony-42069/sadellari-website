@@ -257,7 +257,7 @@ const EnhancedLanding: React.FC = () => {
                     featuring specialized agents for CEO, CFO, and CTO roles, each designed to 
                     autonomously manage and optimize their respective domains within the organization.
                     This innovative approach blends traditional business expertise with cutting edge AI/ML
-                    tech to redefine how businesses of the future oprate. 
+                    tech to redefine how businesses of the future operate. 
                   </p>
                   <p className="text-blue-200/90 leading-relaxed">
                     Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
@@ -310,7 +310,7 @@ const EnhancedLanding: React.FC = () => {
             />
           </div>
           <div className="mt-12 text-center text-blue-200/80">
-            Estimated launch for brands: Late January 2025
+            Estimated launch for brands: Mid Q1
           </div>
         </div>
       </section>
