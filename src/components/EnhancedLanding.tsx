@@ -233,53 +233,24 @@ const EnhancedLanding: React.FC = () => {
               About
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-                  <Image
-                    src="/dorian-photo.jpg"
-                    alt="Dorian Sadellari"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">30+</div>
-                    <div className="text-sm text-blue-200/70">Active Projects</div>
-                  </div>
-                  <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">20+</div>
-                    <div className="text-sm text-blue-200/70">AI/ML Integrations</div>
-                  </div>
-                  <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">9+</div>
-                    <div className="text-sm text-blue-200/70">CRE Tools</div>
-                  </div>
-                  <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">1-3</div>
-                    <div className="text-sm text-blue-200/70">Days Ship Velocity</div>
-                  </div>
-                  <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">15</div>
-                    <div className="text-sm text-blue-200/70">Years in Banking</div>
-                  </div>
-                  <div className="glass p-4 text-center rounded-2xl">
-                    <div className="text-2xl font-bold text-blue-400">4</div>
-                    <div className="text-sm text-blue-200/70">AI C-Suite Agents</div>
-                  </div>
-                </div>
+            <div className="flex flex-col items-center gap-12 max-w-4xl mx-auto">
+              <div className="relative w-96 aspect-square rounded-2xl overflow-hidden">
+                <Image
+                  src="/dorian-photo.jpg"
+                  alt="Dorian Sadellari"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
               </div>
 
-              <div className="space-y-8">
+              <div className="w-full">
                 <div className="glass p-8 rounded-2xl">
                   <h3 className="text-2xl font-bold text-blue-300 mb-4">Vision & Leadership</h3>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
                     Dorian Sadellari has never been one to follow traditional paths. He began his journey at the University 
                     of Michigan studying mechanical engineering before transitioning to finance. What started as a part-time 
-                    teller position, developed into 15 years of various experience at institutions like Bank of America 
+                    teller position, developed into 15 years of various banking experience at institutions like Bank of America 
                     and Huntington National Bank. There, he acquired a deep understanding of sales management,
                     capital markets, and business operations.
                   </p>
