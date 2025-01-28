@@ -5,7 +5,6 @@ import { motion, useAnimation } from 'framer-motion';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import InnovationSection from './InnovationSection';
-import TimelineSection from './TimelineSection';
 import Image from 'next/image';
 import { Button } from './ui/button';
 
@@ -285,7 +284,96 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-      <TimelineSection />
+      <section className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            AI C-Suite Team
+          </motion.h2>
+
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              className="glass p-6 rounded-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                <Image
+                  src="/agents/ceo-agent.png"
+                  alt="CEO Agent"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-blue-300 mb-2">CEO</h3>
+              <p className="text-blue-200/90 text-sm">Visionary Strategist: Leads Sadellari Enterprises with forward-thinking strategies, ensuring alignment with the company's mission and values. Oversees overall operations and decision-making.</p>
+            </motion.div>
+
+            <motion.div
+              className="glass p-6 rounded-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                <Image
+                  src="/agents/cfo-agent.png"
+                  alt="CFO Agent"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-blue-300 mb-2">CFO</h3>
+              <p className="text-blue-200/90 text-sm">Financial Architect: Manages financial planning, budgeting, and resource allocation to ensure long-term sustainability and growth. Tracks financial health and compliance.</p>
+            </motion.div>
+
+            <motion.div
+              className="glass p-6 rounded-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                <Image
+                  src="/agents/cto-agent.png"
+                  alt="CTO Agent"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-blue-300 mb-2">CTO</h3>
+              <p className="text-blue-200/90 text-sm">Innovation Leader: Drives technological advancements, spearheads R&D, and ensures seamless integration of cutting-edge solutions across all company operations.</p>
+            </motion.div>
+
+            <motion.div
+              className="glass p-6 rounded-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                <Image
+                  src="/agents/clo-agent.png"
+                  alt="CLO Agent"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-blue-300 mb-2">CLO</h3>
+              <p className="text-blue-200/90 text-sm">The Enforcer: A relentless legal expert trained on thousands of corporate law cases, contracts, and regulations. Handles everything from filing lawsuits to ensuring airtight compliance.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 relative z-10">
         <div className="container mx-auto px-4">
