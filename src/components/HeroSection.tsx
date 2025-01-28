@@ -44,25 +44,17 @@ const HeroSection: React.FC = () => {
             </div>
           </motion.h1>
 
-          <motion.p 
-            className="text-sm md:text-lg text-blue-200/90 font-light tracking-wide mt-1"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Coming Soon
-          </motion.p>
-
           <div className="max-w-3xl mx-auto space-y-8">
             <p className="text-lg md:text-xl text-blue-200 font-light leading-relaxed">
             </p>
 
             <motion.a
-              href="#contact"
+              href="#"
               className="inline-block px-12 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-lg text-white font-semibold text-lg shadow-lg shadow-blue-500/20 border border-blue-400/20 backdrop-blur-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 button-shine shimmer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Join the Waitlist
+              Coming Soon
             </motion.a>
           </div>
         </div>

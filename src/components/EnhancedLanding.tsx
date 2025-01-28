@@ -5,7 +5,6 @@ import { motion, useAnimation } from 'framer-motion';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import InnovationSection from './InnovationSection';
-import GovernanceSection from './GovernanceSection';
 import TimelineSection from './TimelineSection';
 import Image from 'next/image';
 import { Button } from './ui/button';
@@ -175,11 +174,52 @@ const EnhancedLanding: React.FC = () => {
         { href: '#home', text: 'Home' },
         { href: '#about', text: 'About' },
         { href: '#innovation', text: 'Innovation' },
-        { href: '#portfolio', text: 'Portfolio' },
-        { href: '#contact', text: 'Contact' }
+        { href: '#portfolio', text: 'Portfolio' }
       ]} />
       
       <HeroSection />
+
+      <InnovationSection />
+
+      <section id="portfolio" className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Portfolio
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <BrandCard
+              logo="/a3-final-cropped.png"
+              title="ABARE"
+              actualBrandName="ABARE"
+              description="An innovative CRE analysis platform combining advanced financial modeling with AI-driven insights. Streamlines deal evaluation, market analysis, and investment decisions."
+              delay={0.2}
+            />
+            <BrandCard
+              logo="/d-logo-final-cropped.png"
+              title="DorianAI"
+              actualBrandName="DorianAI"
+              description="Expert AI consulting and system integration services, transforming businesses through custom ML solutions, strategic automation, and advanced analytics implementations."
+              delay={0.4}
+            />
+            <BrandCard
+              logo="/e-logo-final-cropped.png"
+              title="AiStaff"
+              actualBrandName="AiStaff"
+              description="A next-generation AI agent marketplace revolutionizing enterprise operations. Deploy customized AI solutions for workflow automation, data analysis, and business process optimization."
+              delay={0.6}
+            />
+          </div>
+          <div className="mt-12 text-center text-blue-200/80">
+            Estimated launch for brands: Mid Q1
+          </div>
+        </div>
+      </section>
 
       <section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
@@ -237,27 +277,28 @@ const EnhancedLanding: React.FC = () => {
                 <div className="glass p-8 rounded-2xl">
                   <h3 className="text-2xl font-bold text-blue-300 mb-4">Vision & Leadership</h3>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    With over a decade of various experience in banking at institutions like Bank of America 
-                    and Huntington National Bank, Dorian Sadellari developed a deep understanding of financial 
-                    markets and complex business operations.
+                    Dorian Sadellari has never been one to follow traditional paths. He began his journey at the University 
+                    of Michigan studying mechanical engineering before transitioning to finance. What started as a part-time 
+                    teller position, developed into 15 years of various experience at institutions like Bank of America 
+                    and Huntington National Bank. There, he acquired a deep understanding of sales management,
+                    capital markets, and business operations.
                   </p>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    This foundation paved the way for his entrepreneurial journey with Alliance Business Advisors in 2021. 
-                    While the venture provided more lessons than successes, it was a transformative experience 
-                    that strengthened his ability to innovate, adapt, and persevere.
+                    This foundation paved the way for his entrepreneurial journey by launching his commercial loan business
+                    in 2021. While the venture provided more lessons than successes, it was a transformative experience 
+                    that strengthened his ability to innovate, adapt, and persevere. The setbacks weren't failures;
+                    they were the blueprint for something bigger. 
                   </p>
                   <p className="text-blue-200/90 leading-relaxed mb-6">
-                    Building on these lessons, in the 2H of 2024, Dorian embarked on a transformative six-month journey 
-                    mastering advanced artificial intelligence and machine learning technologies. Armed with this
-                    expertise, he is now leading a revolutionary concept: the first fully AI-driven and DAO-operated 
-                    holding company in America.
+                    Building on these lessons, in 2024, Dorian immersed himself in artificial intelligence and 
+                    machine learning, recognizing that the future of business wouldn't be driven by humans alone.  
+                    This led to the creation of Sadellari Enterprises, the first AI-powered, DAO-operated holding company
+                    in America-where intelligent agents run operations, make financial decisions, and optimize growth.
                   </p>  
                   <p className="text-blue-200/90 leading-relaxed mb-6">
                     At the heart of this groundbreaking initiative is an advanced AI-powered C-Suite team,
-                    featuring specialized agents for CEO, CFO, and CTO roles, each designed to 
+                    featuring specialized agents for CEO, CFO, CTO and CLO roles, each designed to 
                     autonomously manage and optimize their respective domains within the organization.
-                    This innovative approach blends traditional business expertise with cutting edge AI/ML
-                    tech to redefine how businesses of the future operate. 
                   </p>
                   <p className="text-blue-200/90 leading-relaxed">
                     Through Sadellari Enterprises, we're building a revolutionary ecosystem of brands: 
@@ -273,49 +314,6 @@ const EnhancedLanding: React.FC = () => {
         </div>
       </section>
 
-      <InnovationSection />
-
-      <section id="portfolio" className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Portfolio
-          </motion.h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <BrandCard
-              logo="/a3-final-cropped.png"
-              title="ABARE"
-              actualBrandName="ABARE"
-              description="An innovative CRE analysis platform combining advanced financial modeling with AI-driven insights. Streamlines deal evaluation, market analysis, and investment decisions."
-              delay={0.2}
-            />
-            <BrandCard
-              logo="/d-logo-final-cropped.png"
-              title="DorianAI"
-              actualBrandName="DorianAI"
-              description="Expert AI consulting and system integration services, transforming businesses through custom ML solutions, strategic automation, and advanced analytics implementations."
-              delay={0.4}
-            />
-            <BrandCard
-              logo="/e-logo-final-cropped.png"
-              title="AiStaff"
-              actualBrandName="AiStaff"
-              description="A next-generation AI agent marketplace revolutionizing enterprise operations. Deploy customized AI solutions for workflow automation, data analysis, and business process optimization."
-              delay={0.6}
-            />
-          </div>
-          <div className="mt-12 text-center text-blue-200/80">
-            Estimated launch for brands: Mid Q1
-          </div>
-        </div>
-      </section>
-
-      <GovernanceSection />
       <TimelineSection />
 
       <section className="py-16 relative z-10">
@@ -336,67 +334,6 @@ const EnhancedLanding: React.FC = () => {
       </section>
 
 
-      <section id="contact" className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Join the Waitlist
-          </motion.h2>
-          <div className="max-w-md mx-auto bg-white/5 p-8 rounded-2xl backdrop-blur-lg border border-white/10">
-            <form onSubmit={async (e) => {
-              e.preventDefault();
-              const formData = new FormData(e.currentTarget);
-              const email = formData.get('email');
-              
-              try {
-                const response = await fetch('/api/waitlist', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({ email }),
-                });
-
-                const result = await response.json();
-                
-                if (response.ok) {
-                  alert(result.message || 'Thank you! You have been added to the waitlist.');
-                  if (e.currentTarget) {
-                    e.currentTarget.reset();
-                  }
-                } else {
-                  alert(result.error || 'Something went wrong. Please try again.');
-                }
-              } catch (error: unknown) {
-                console.error('Waitlist submission error:', error);
-                const message = error instanceof Error ? error.message : 'Please try again later.';
-                alert(`An unexpected error occurred: ${message}`);
-              }
-            }}>
-              <div className="flex flex-col space-y-4">
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full px-4 py-3 bg-slate-800 border border-blue-500/20 rounded-lg focus:outline-none focus:border-blue-500 text-blue-100"
-                  placeholder="Enter your email"
-                />
-                <Button
-                  type="submit"
-                  className="w-full py-3 rounded-2xl font-semibold"
-                  variant="gradient"
-                >
-                  Join Waitlist
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

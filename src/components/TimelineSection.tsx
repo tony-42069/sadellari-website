@@ -19,7 +19,7 @@ const TimelineSection = () => {
               <div className="w-1/2 pr-8 text-right">
                 <h3 className="text-2xl font-bold text-blue-300 mb-2">Q1 2024</h3>
                 <p className="text-blue-200">
-                  - Initial 3 brands launch (January)                  
+                  - Initial 3 brands launch                   
                   - Focus on growth and infrastructure
                 </p>
               </div>
