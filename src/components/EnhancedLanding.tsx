@@ -178,48 +178,6 @@ const EnhancedLanding: React.FC = () => {
       
       <HeroSection />
 
-      <InnovationSection />
-
-      <section id="portfolio" className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Portfolio
-          </motion.h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <BrandCard
-              logo="/a3-final-cropped.png"
-              title="ABARE"
-              actualBrandName="ABARE"
-              description="An innovative CRE analysis platform combining advanced financial modeling with AI-driven insights. Streamlines deal evaluation, market analysis, and investment decisions."
-              delay={0.2}
-            />
-            <BrandCard
-              logo="/d-logo-final-cropped.png"
-              title="DorianAI"
-              actualBrandName="DorianAI"
-              description="Expert AI consulting and system integration services, transforming businesses through custom ML solutions, strategic automation, and advanced analytics implementations."
-              delay={0.4}
-            />
-            <BrandCard
-              logo="/e-logo-final-cropped.png"
-              title="AiStaff"
-              actualBrandName="AiStaff"
-              description="A next-generation AI agent marketplace revolutionizing enterprise operations. Deploy customized AI solutions for workflow automation, data analysis, and business process optimization."
-              delay={0.6}
-            />
-          </div>
-          <div className="mt-12 text-center text-blue-200/80">
-            Estimated launch for brands: Mid Q1
-          </div>
-        </div>
-      </section>
-
       <section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
@@ -280,11 +238,91 @@ const EnhancedLanding: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            <div className="grid md:grid-cols-4 gap-8 mt-12">
+              <motion.div
+                className="glass p-6 rounded-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                  <Image
+                    src="/agents/ceo-agent.png"
+                    alt="CEO Agent"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-blue-300 mb-2">CEO</h3>
+                <p className="text-blue-200/90 text-sm">Visionary Strategist: Leads Sadellari Enterprises with forward-thinking strategies, ensuring alignment with the company's mission and values. Oversees overall operations and decision-making.</p>
+              </motion.div>
+
+              <motion.div
+                className="glass p-6 rounded-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                  <Image
+                    src="/agents/cfo-agent.png"
+                    alt="CFO Agent"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-blue-300 mb-2">CFO</h3>
+                <p className="text-blue-200/90 text-sm">Financial Architect: Manages financial planning, budgeting, and resource allocation to ensure long-term sustainability and growth. Tracks financial health and compliance.</p>
+              </motion.div>
+
+              <motion.div
+                className="glass p-6 rounded-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                  <Image
+                    src="/agents/cto-agent.png"
+                    alt="CTO Agent"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-blue-300 mb-2">CTO</h3>
+                <p className="text-blue-200/90 text-sm">Innovation Leader: Drives technological advancements, spearheads R&D, and ensures seamless integration of cutting-edge solutions across all company operations.</p>
+              </motion.div>
+
+              <motion.div
+                className="glass p-6 rounded-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+              >
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
+                  <Image
+                    src="/agents/clo-agent.png"
+                    alt="CLO Agent"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-blue-300 mb-2">CLO</h3>
+                <p className="text-blue-200/90 text-sm">The Enforcer: A relentless legal expert trained on thousands of corporate law cases, contracts, and regulations. Handles everything from filing lawsuits to ensuring airtight compliance.</p>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-24 relative z-10">
+      <InnovationSection />
+
+      <section id="portfolio" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <motion.h2
             className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient glow"
@@ -292,85 +330,34 @@ const EnhancedLanding: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            AI C-Suite Team
+            Portfolio
           </motion.h2>
 
-          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <motion.div
-              className="glass p-6 rounded-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
-                <Image
-                  src="/agents/ceo-agent.png"
-                  alt="CEO Agent"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-blue-300 mb-2">CEO</h3>
-              <p className="text-blue-200/90 text-sm">Visionary Strategist: Leads Sadellari Enterprises with forward-thinking strategies, ensuring alignment with the company's mission and values. Oversees overall operations and decision-making.</p>
-            </motion.div>
-
-            <motion.div
-              className="glass p-6 rounded-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
-                <Image
-                  src="/agents/cfo-agent.png"
-                  alt="CFO Agent"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-blue-300 mb-2">CFO</h3>
-              <p className="text-blue-200/90 text-sm">Financial Architect: Manages financial planning, budgeting, and resource allocation to ensure long-term sustainability and growth. Tracks financial health and compliance.</p>
-            </motion.div>
-
-            <motion.div
-              className="glass p-6 rounded-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
-                <Image
-                  src="/agents/cto-agent.png"
-                  alt="CTO Agent"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-blue-300 mb-2">CTO</h3>
-              <p className="text-blue-200/90 text-sm">Innovation Leader: Drives technological advancements, spearheads R&D, and ensures seamless integration of cutting-edge solutions across all company operations.</p>
-            </motion.div>
-
-            <motion.div
-              className="glass p-6 rounded-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
-                <Image
-                  src="/agents/clo-agent.png"
-                  alt="CLO Agent"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-blue-300 mb-2">CLO</h3>
-              <p className="text-blue-200/90 text-sm">The Enforcer: A relentless legal expert trained on thousands of corporate law cases, contracts, and regulations. Handles everything from filing lawsuits to ensuring airtight compliance.</p>
-            </motion.div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <BrandCard
+              logo="/a3-final-cropped.png"
+              title="ABARE"
+              actualBrandName="ABARE"
+              description="An innovative CRE analysis platform combining advanced financial modeling with AI-driven insights. Streamlines deal evaluation, market analysis, and investment decisions."
+              delay={0.2}
+            />
+            <BrandCard
+              logo="/d-logo-final-cropped.png"
+              title="DorianAI"
+              actualBrandName="DorianAI"
+              description="Expert AI consulting and system integration services, transforming businesses through custom ML solutions, strategic automation, and advanced analytics implementations."
+              delay={0.4}
+            />
+            <BrandCard
+              logo="/e-logo-final-cropped.png"
+              title="AiStaff"
+              actualBrandName="AiStaff"
+              description="A next-generation AI agent marketplace revolutionizing enterprise operations. Deploy customized AI solutions for workflow automation, data analysis, and business process optimization."
+              delay={0.6}
+            />
+          </div>
+          <div className="mt-12 text-center text-blue-200/80">
+            Estimated launch for brands: Mid Q1
           </div>
         </div>
       </section>
@@ -391,8 +378,6 @@ const EnhancedLanding: React.FC = () => {
           </blockquote>
         </div>
       </section>
-
-
     </div>
   );
 };
