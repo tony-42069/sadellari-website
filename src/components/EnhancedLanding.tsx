@@ -6,7 +6,6 @@ import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import InnovationSection from './InnovationSection';
 import Image from 'next/image';
-import { Button } from './ui/button';
 
 interface Particle {
   x: number;
