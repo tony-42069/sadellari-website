@@ -1,6 +1,7 @@
 {
     "rewrites": [
       { "source": "/ai-staff", "destination": "https://ai-worker-hub.vercel.app" },
-      { "source": "/ai-staff/(.*)", "destination": "https://ai-worker-hub.vercel.app/$1" }
+      { "source": "/ai-staff/(.*)", "destination": "https://ai-worker-hub.vercel.app/$1" },
+      { "source": "/(.*)", "has": [{ "type": "host", "value": "sadellari.com/ai-staff" }], "destination": "https://ai-worker-hub.vercel.app/$1" }
     ]
   }
