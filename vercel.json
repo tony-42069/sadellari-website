@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/ai-staff", "destination": "https://ai-worker-hub.vercel.app" },
+      { "source": "/ai-staff/(.*)", "destination": "https://ai-worker-hub.vercel.app/$1" }
+    ]
+  }
